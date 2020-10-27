@@ -247,7 +247,92 @@ app.put('/particular/:id',async(req,res)=>{
 
 //crud operation for userEvent
 
-const UserEvent = require('../database/Schema/userEvents.js')
+const UserEvent = require('../database/Schema/userEvents.js');
+
+
+app.get('/userEvent',async(req,res)=>{
+  await UserEvent.find({},(err,data)=>{
+    res.json(data)
+  })
+});
+
+app.get('/userEvent/:id',async(req,res)=>{
+  await UserEvent.findById(req.params.id,(err,data)=>{
+    res.json(data)
+  })
+})
+
+
+app.post('/userEvent/add',async(req,res)=>{
+  newUserEvent = new UserEvent ({
+     user:req.body.user,
+     name: req.body.name,
+     type:req.body.type,
+     place:req.body.place,
+     date:req.body.date,
+     imgUrl :req.body.imgUrl,
+     like :req.body.like,
+     disLike : req.body.disLike
+  })
+  await newUserEvent.save(()=>{res.json(newUserEvent)})
+});
+
+
+
+app.delete('/userEvent',async(req,res)=>{
+  await UserEvent.deleteMany(req.params.id,req.body)
+  res.json({'message':'all data deleted'})
+});
+
+
+app.delete('/userEvent/:id',async(req,res)=>{
+  await UserEvent.findByIdAndDelete(req.params.id,req.body)
+  res.json({'message':'specific data deleted'})
+});
+
+app.put('/userEvent/:id',async(req,res)=>{
+  await UserEvent.findByIdAndUpdate(req.params.id,req.body)
+  res.json({'message':'specific data updated'})
+});
+
+//crud operation for messages
+const Message = require ('../database/Schema/Messages.js');
+
+app.get('/message',async(req,res)=>{
+  await Message.find({},(err,data)=>{
+    res.json(data)
+  })
+});
+app.get('/message/:id',async(req,res)=>{
+  await Message.findById(req.params.id,(err,data)=>{
+    res.json(data)
+  })
+})
+app.post('/Message/add',async(req,res)=>{
+  newMessage = new Message ({
+     user: req.body.user,
+     text:req.body.text,
+   
+  })
+  await newMessage.save(()=>{res.json(newMessage)})
+})
+app.delete('/message',async(req,res)=>{
+  await Message.deleteMany(req.params.id,req.body)
+  res.json({'message':'all data deleted'})
+})
+app.delete('/message/:id',async(req,res)=>{
+  await Message.findByIdAndDelete(req.params.id,req.body)
+  res.json({'message':'spacific data deleted'})
+})
+app.put('/message/:id',async(req,res)=>{
+  await Message.findByIdAndUpdate(req.params.id,req.body)
+  res.json({'message':'spacific data updated'})
+})
+
+
+
+
+
 
 
 
