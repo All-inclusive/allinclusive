@@ -3,14 +3,18 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 
 class SignUpMyAccount extends Component {
   render() {
-    return (
-      <div>
-        <Container fluid>
+    return (        
+      <div >
+         
+        <Container fluid  >
+            
           <Row>
+              
             <Col>
               <br></br>
               <br></br>
               <br></br>
+              <h1>Client</h1>
               <Form>
                 <Form.Row>
                   <Col>
@@ -47,12 +51,15 @@ class SignUpMyAccount extends Component {
                 Submit
               </button>
             </Col>
+           </Row>
 
+            <Row>
             <Col>
               <Col>
                 <br></br>
                 <br></br>
                 <br></br>
+                <h1>Company</h1>
                 <Form.Label>Company name</Form.Label>
                 <Form.Control name="companyName" placeholder="company name " />
               </Col>
@@ -87,9 +94,12 @@ class SignUpMyAccount extends Component {
               </button>
               </Col>
             </Col>
+            
           </Row>
         </Container>
+        
       </div>
+      
     );
   }
 }
