@@ -6,7 +6,6 @@ const sellerSchema = new mongoose.Schema(
         password : {type:String , required:true},
         phoneNumber : {type:String , required:true},
         imgUrl :{type:String , required:true},
-       // events
     },
     {
         timestamps : true,
