@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
+import React, { Component } from "react";
 
+<<<<<<< HEAD
 export default class Client extends Component {
   
     render() {
@@ -17,7 +16,21 @@ export default class Client extends Component {
                   </Menu>
                 </ProSidebar>;
             </div>
+=======
+>>>>>>> 148ebc5a8220e0d5c685830f7fd1287673e3a1c4
 
-        )
-    }
+ class Client extends Component  {
+     constructor(props){
+         super(props)
+     }
+
+     render() {
+         return (
+      <div>
+          
+      </div>
+    );
+  }
 }
+
+export default Client;
