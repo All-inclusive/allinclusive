@@ -64,7 +64,7 @@ class SignUpMyAccount extends Component {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
 
-                <Form.Control type="password" placeholder="Password" />
+                
               </Col>
               <Col>
                 <Form.Label>Phone number</Form.Label>
