@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from 'react-bootstrap';
 import '../../style/SideNav.css';
 
+
 class SideBar extends React.Component {
   constructor(props){
     super(props)
@@ -12,7 +13,6 @@ class SideBar extends React.Component {
   
     return (
        
-      
         <div>
          <Image src="https://mauritanie-talent-innovation.org/toto.png" roundedCircle /><br></br>
         <br></br>
