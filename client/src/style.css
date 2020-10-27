@@ -1,44 +1,10 @@
 
-/* body{
-    height: 100vh;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: lightgrey;
+   body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
   }
-
-  li {
-    display: block;
-    float:left;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  button{
-    border: none;
-    padding:10px;
-  }
-  .dropdown {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .dropdown-content{
-    color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+  .Mirzz {
+    color: pink;
   }
   
-    .right {
-    float: right;
-    border-left: 2px solid black;
-  }
-   */
+ 

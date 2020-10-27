@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
-
+import Client from './Components/Client.jsx'
+import './style.css'
 class App extends React.Component {
     render(){
         return(
-           <div></div> 
+           <div>
+               <Client />
+           </div> 
         )
     }
 }
