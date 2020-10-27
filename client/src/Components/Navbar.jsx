@@ -16,17 +16,19 @@ render(){
                     <NavDropdown.Item >Action</NavDropdown.Item>
                         <NavDropdown.Item >Another action</NavDropdown.Item>
                         <NavDropdown.Item >Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        
+                        <NavDropdown.Item >Separated link</NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
                 <Nav>
-                    <NavDropdown title="My Account" id="collasible-nav-dropdown">
-                        <NavDropdown.Item >Sign In</NavDropdown.Item>
-                        <NavDropdown.Item >Sign Up</NavDropdown.Item>
+                    <NavDropdown title="Extra" id="collasible-nav-dropdown">
+                        <NavDropdown.Item >Job opportunities</NavDropdown.Item>
+                        <NavDropdown.Item >Become a Seller</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item >About Us</NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Link eventKey={2} >
-                    Extra
+                        My Account
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
