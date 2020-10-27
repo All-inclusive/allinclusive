@@ -2,6 +2,35 @@ import React, { Component } from "react";
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
 
 class SignUpMyAccount extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            client:true,
+            company:true,
+            showClientSignUp : false,
+            showCompanySignUp: false
+        }
+    }
+
+    clicked(){
+        this.setState({
+            client:false,
+            company:false,
+            showClientSignUp : true,
+            showCompanySignUp : false
+     
+        })
+     }
+     clicked2(){
+        this.setState({
+            client:false,
+            company:false,
+            showClientSignUp : false,
+            showCompanySignUp : true
+     
+        })
+     }
+
   render() {
     var sectionStyle = {
       width: "100%",
@@ -16,6 +45,7 @@ class SignUpMyAccount extends Component {
       <div>
         <Container fluid>
           <Row>
+          { this.state.showClientSignUp &&
             <Col id="clientSignUp" style={sectionStyle}>
               <br></br>
               <br></br>
@@ -79,7 +109,8 @@ class SignUpMyAccount extends Component {
               <br></br>
               <br></br>
             </Col>
-
+  }
+            { this.state.showCompanySignUp &&
             <Col id="companySignUp" style={sectionStyle}>
               <br></br>
               <br></br>
@@ -134,28 +165,35 @@ class SignUpMyAccount extends Component {
               <br></br>
               <br></br>
             </Col>
+  }
           </Row>
           <Row> 
-              <Col>
+          { this.state.client &&
+              <Col id='client'>
+                  
               <h1> Client experience </h1>
               <p>As a client while using our application you will have the chance to create an account in order <br></br>
               to see our EVENTS SERVICES and you will have fun !!!!! <br></br>
               <br></br>
               <h5>Click on the smiley to create your account </h5>
               <br></br>
-              <Image src="https://webstockreview.net/images/clipart-smile-smile-gif-6.gif" rounded style={{width:'100px',height:'100px'}}/>
+              <Image src="https://webstockreview.net/images/clipart-smile-smile-gif-6.gif" rounded style={{width:'100px',height:'100px'}}  onClick={()=>this.clicked()} />
               </p>
+ 
               </Col>
-              <Col>
+  }
+             { this.state.company &&
+              <Col id='company'>
               <h1> Company  experience </h1>
               <p>As a company while using our application you will have the chance to create an account in order <br></br>
               to post your EVENTS  with all details  <br></br>
               <br></br>
               <h5>Time to create your account  </h5>
               <br></br>
-              <Image src="https://webstockreview.net/images/clipart-smile-smile-gif-6.gif" rounded style={{width:'100px',height:'100px'}}/>
+              <Image src="https://webstockreview.net/images/clipart-smile-smile-gif-6.gif" rounded style={{width:'100px',height:'100px'}} onClick={()=>this.clicked2()} />
               </p>
               </Col>
+  }
           </Row>
         </Container>
       </div>
