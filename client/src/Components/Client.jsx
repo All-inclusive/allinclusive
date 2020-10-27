@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
+class Client extends Component {
+  constructor(props) {
+    super(props);
+  }
 
- class Client extends Component  {
-     constructor(props){
-         super(props)
-     }
-
-     render() {
-         return (
+  render() {
+    return (
       <div>
-          
+        
+
       </div>
     );
   }
