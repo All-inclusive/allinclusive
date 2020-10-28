@@ -8,19 +8,17 @@ import Navbar from './Components/Navbar.jsx';
 // import SignIn from './Components/SignIn.jsx';
 import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
-// import Events from './Components/EventsList.jsx';
+import Events from './Components/EventsList.jsx';
 
 class App extends React.Component {
 
     render(){
         return(
             <div>
-                <Navbar>
-                
-                </Navbar>
-                <Slide /> 
-                {/* <Events /> */}
-                <SignUpMyAccount/>
+                {/* <Navbar /> */}
+                {/* <Slide />  */}
+                <Events />
+                {/* <SignUpMyAccount/> */}
             </div>
         )
     }
