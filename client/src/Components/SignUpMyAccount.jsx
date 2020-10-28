@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
+import SignIn from "./SignIn.jsx";
 
 class SignUpMyAccount extends Component {
   constructor(props) {
@@ -9,7 +10,9 @@ class SignUpMyAccount extends Component {
       company: true,
       showClientSignUp: false,
       showCompanySignUp: false,
+      showLogin: true,
     };
+    this.RegisterClick=this.RegisterClick.bind(this)
   }
 
   clicked() {
@@ -18,6 +21,7 @@ class SignUpMyAccount extends Component {
       company: false,
       showClientSignUp: true,
       showCompanySignUp: false,
+      showLogin: false,
     });
   }
   clicked2() {
@@ -26,6 +30,16 @@ class SignUpMyAccount extends Component {
       company: false,
       showClientSignUp: false,
       showCompanySignUp: true,
+      showLogin: false,
+    });
+  }
+  RegisterClick(){
+    this.setState({
+      client: true,
+      company: true,
+      showClientSignUp: false,
+      showCompanySignUp: false,
+      showLogin: false,
     });
   }
 
@@ -42,12 +56,11 @@ class SignUpMyAccount extends Component {
     return (
       <div>
         <Container fluid>
+          {this.state.showLogin ? <SignIn RegisterClick={this.RegisterClick} /> : 
+          <div>
           <Row>
             {this.state.showClientSignUp && (
               <Col xs={6} id="clientSignUp" style={sectionStyle}>
-                <br></br>
-                <br></br>
-                <br></br>
                 <h1>
                   <svg
                     width="1em"
@@ -215,7 +228,13 @@ class SignUpMyAccount extends Component {
               </Col>
             )}
           </Row>
+          </div>
+          }
         </Container>
+
+       
+
+        
       </div>
     );
   }
