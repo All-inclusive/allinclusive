@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 3000;
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -24,49 +25,12 @@ console.log('Database is connected ')
 })
 
 // import Routes
-const authRoute = require('./routes/auth.js');
+
 
 //Routes middlewares
-app.use('/api/user', authRoute);
+app.use('/api/user', require('./routes/auth.js'));
 
 
-//crud operation for users 
-const User = require('../database/Schema/Users.js');
-
-app.get('/user',async(req,res)=>{
-  await User.find({},(err,data)=>{
-    res.json(data)
-  })
-});
-
-// app.post('/user/add',async(req,res)=>{
-//   newUser = new User ({
-//      userName: req.body.userName,
-//      email:req.body.email,
-//      password:req.body.password,
-//      phoneNumber:req.body.phoneNumber,
-//      specialNeed :req.body.specialNeed,
-//      imgUrl :req.body.imgUrl 
-//   })
-//   await newUser.save(()=>{res.json(newUser)})
-// });
-
-app.delete('/user',async(req,res)=>{
-  await User.deleteMany(req.params.id,req.body)
-  res.json({'message':'all data deleted'})
-});
-
-
-app.delete('/user/:id',async(req,res)=>{
-  await User.findByIdAndDelete(req.params.id,req.body)
-  res.json({'message':'specific data deleted'})
-});
-
-
-app.put('/user/:id',async(req,res)=>{
-  await User.findByIdAndUpdate(req.params.id,req.body)
-  res.json({'message':'specific data updated'})
-});
 
 //crud operations for events
 const Event = require('../database/Schema/Events.js');
