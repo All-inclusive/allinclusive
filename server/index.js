@@ -23,6 +23,12 @@ Connection.once('open',function(){
 console.log('Database is connected ')
 })
 
+// import Routes
+const authRoute = require('./routes/auth.js');
+
+//Routes middlewares
+app.use('/api/user', authRoute);
+
 
 //crud operation for users 
 const User = require('../database/Schema/Users.js');
@@ -33,17 +39,17 @@ app.get('/user',async(req,res)=>{
   })
 });
 
-app.post('/user/add',async(req,res)=>{
-  newUser = new User ({
-     userName: req.body.userName,
-     email:req.body.email,
-     password:req.body.password,
-     phoneNumber:req.body.phoneNumber,
-     specialNeed :req.body.specialNeed,
-     imgUrl :req.body.imgUrl 
-  })
-  await newUser.save(()=>{res.json(newUser)})
-});
+// app.post('/user/add',async(req,res)=>{
+//   newUser = new User ({
+//      userName: req.body.userName,
+//      email:req.body.email,
+//      password:req.body.password,
+//      phoneNumber:req.body.phoneNumber,
+//      specialNeed :req.body.specialNeed,
+//      imgUrl :req.body.imgUrl 
+//   })
+//   await newUser.save(()=>{res.json(newUser)})
+// });
 
 app.delete('/user',async(req,res)=>{
   await User.deleteMany(req.params.id,req.body)

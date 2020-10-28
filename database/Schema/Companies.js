@@ -7,7 +7,6 @@ const companySchema = new mongoose.Schema(
         phoneNumber : {type:String , required:true},
         adress :{type: String, required:true},
         imgUrl :{type:String , required:true},
-        //events
     },
     {
         timestamps : true,

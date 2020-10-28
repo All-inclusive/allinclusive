@@ -5,6 +5,7 @@ const eventSchema = new mongoose.Schema(
         type : {type:String , required:true},
         place : {type:String , required:true},
         date: {type:Date , required:true},
+        description :{type:String , required:true},
         imgUrl :{type:String , required:true},
         like :{type:Number , required:true},
         disLike :{type:Number , required:true}
