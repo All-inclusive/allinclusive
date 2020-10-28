@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
+import SignIn from './SignIn.jsx'
 
 class SignUpMyAccount extends Component {
   constructor(props) {
@@ -40,8 +41,16 @@ class SignUpMyAccount extends Component {
     };
 
     return (
+
       <div>
+          <div>
+        <SignIn/>
+        </div>
+        
         <Container fluid>
+            
+        
+        
           <Row>
             {this.state.showClientSignUp && (
               <Col xs={6} id="clientSignUp" style={sectionStyle}>
