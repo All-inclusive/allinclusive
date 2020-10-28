@@ -16,8 +16,9 @@ class App extends React.Component {
                 <Navbar />
                 <Slide /> 
                 <Events />
+                <SignUpMyAccount/>
             </div>
         )
     }
 }
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));

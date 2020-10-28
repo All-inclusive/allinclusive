@@ -1,19 +1,28 @@
 import React, { Component } from "react";
+import SideNav from "./SideNav.jsx";
+import { Col, Container, Row } from "react-bootstrap";
 
-export default class Client extends Component {
+class Client extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
       <div>
-        <ProSidebar>
-          <Menu iconShape="square">
-            <MenuItem icon={<FaGem />}>Dashboard</MenuItem>
-            <SubMenu title="Components" icon={<FaHeart />}>
-              <MenuItem>Component 1</MenuItem>
-              <MenuItem>Component 2</MenuItem>
-            </SubMenu>
-          </Menu>
-        </ProSidebar>;
+        <Container fluid>
+            <Row>
+              <Col>
+                <SideNav/>
+              </Col>
+              <Col xs={6} style={{overflowY: "scroll"}}>2 of 3</Col>
+              <Col>3 of 3</Col>
+            </Row>
+          </Container>
+
       </div>
-  )}
+    );
+  }
 }
+
+export default Client;
