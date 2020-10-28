@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SideNav from "./SideNav.jsx";
 import { Col, Container, Row } from "react-bootstrap";
+import ChatBox from './ChatBox.jsx'
 
 class Client extends Component {
   constructor(props) {
@@ -16,7 +17,9 @@ class Client extends Component {
                 <SideNav/>
               </Col>
               <Col xs={6} style={{overflowY: "scroll"}}>2 of 3</Col>
-              <Col>3 of 3</Col>
+              <Col>
+              <ChatBox/>
+              </Col>
             </Row>
           </Container>
 

@@ -8,11 +8,11 @@ class Navigationbar extends React.Component {
 render(){
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand >All-Inclusive</Navbar.Brand>
+            <Navbar.Brand ><button className='reload' onClick={() => window.location.reload(false)}>All-Inclusive</button></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                <NavDropdown title="I I I" id="collasible-nav-dropdown">
+                <NavDropdown title="" id="collasible-nav-dropdown">
                     <NavDropdown.Item >Action</NavDropdown.Item>
                         <NavDropdown.Item >Another action</NavDropdown.Item>
                         <NavDropdown.Item >Something</NavDropdown.Item>
