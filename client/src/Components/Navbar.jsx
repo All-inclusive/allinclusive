@@ -8,7 +8,7 @@ class Navigationbar extends React.Component {
 render(){
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand >All-Inclusive</Navbar.Brand>
+            <Navbar.Brand ><button className='reload' onClick={() => window.location.reload(false)}>All-Inclusive</button></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">

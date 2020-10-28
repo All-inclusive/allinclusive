@@ -12,11 +12,10 @@ class Event extends React.Component {
         {this.props.eventSchema.map(event => 
         <li className="event-name" key={event.name}>
           <div className="event-type" onClick={()=>this.props.handleClick(event)}>{event.name}</div>
-          <img src={event.imageUrl} onClick={()=>this.props.handleClick(event)} className="feed-image"/>
-          <span className="event-list-item-lede">{event.description.split('.')[0]}</span>
-        </li>)}
+          <img src={event.imageUrl} onClick={()=>this.props.handleClick(event)} className="event-image"/>
+          </li>)}
       </ul>
     </div>
-  )}
+    )}
 }
 export default Event;

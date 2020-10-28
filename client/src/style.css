@@ -9,3 +9,8 @@ body{
 .carousel-inner{
     background-color: lightblue
 }
+.reload{
+    background-color: transparent;
+    border: none;
+    color: grey;
+}
