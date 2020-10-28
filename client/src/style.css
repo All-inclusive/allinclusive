@@ -1,0 +1,16 @@
+body{
+    height: 100vh;
+}
+.d-block{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.carousel-inner{
+    background-color: lightblue
+}
+.reload{
+    background-color: transparent;
+    border: none;
+    color: grey;
+}
