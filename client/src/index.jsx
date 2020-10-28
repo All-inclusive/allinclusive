@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar.jsx';
 import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
 // import Events from './Components/EventsList.jsx';
+
 class App extends React.Component {
 
     render(){
