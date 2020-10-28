@@ -24,7 +24,7 @@ class App extends React.Component {
                 {/* <Slide />  */}
                 {/* <Events /> */}
 
-                <JobOpp/>
+                <SignUpMyAccount/>
             </div>
         )
     }
