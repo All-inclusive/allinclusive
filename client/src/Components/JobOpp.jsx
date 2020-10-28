@@ -7,12 +7,12 @@ class JobOpp extends Component {
     render(){
         return (
         
-            <Container  >
+            <div>
                 <br></br>
                 <br></br>
-                <br></br>
-                <Row >
-                <Col>
+                <center>
+                    <Row>
+                <Col style={{fontSize:'20px'}}>
             <h1>
                   <svg
                     width="1em"
@@ -46,29 +46,38 @@ class JobOpp extends Component {
                   name="phoneNumber"
                   placeholder="Enter your phone number"
                 />
+                
+                <Form.Control name="gendre" />
+                <Form.Label>Image URL</Form.Label>
+                <Form.Control name="url" placeholder="Enter your image URL" />
+                </Col>
+                <Col style={{fontSize:'20px'}}>
+                <br></br>
+                <br></br>
+                <br></br>
                 <Form.Label>Weight</Form.Label>
                 <Form.Control name="weight"  />
                 <Form.Label>Height</Form.Label>
                 <Form.Control name="height" />
                 <Form.Label>Age</Form.Label>
                 <Form.Control name="age" />
-                <Form.Label>Email</Form.Label>
-                <Form.Control name="email" placeholder="Enter email" />
-                <Form.Label>Image URL</Form.Label>
-                <Form.Control name="url" placeholder="Enter your image URL" />
-                
+                <Form.Label>Gendre</Form.Label>
                 <br></br>
                 
                   <button type="button" class="btn btn-outline-info">
                     Submit
                   </button>
+                </Col>
+                
+                </Row>
+                
                 
                 <br></br>
                 <br></br>
                 <br></br>
-              </Col>
-              </Row>
-            </Container>
+              
+              </center>
+              </div>
         
         );
     }
