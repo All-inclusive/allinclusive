@@ -9,18 +9,17 @@ import SignIn from "./Components/SignIn.jsx";
 import SignUp from "./Components/SignUpMyAccount.jsx";
 import Client from './Components/Client.jsx';
 import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
+import Admin from './Components/Admin.jsx'
 import "./style.css";
 
 
-class App extends React.Component {
+class App extends React.Component {   
   render() {
     return (
       <div>
-        <div>
-          <Navbar />
           
-          <SignUpMyAccount/>
-        </div>
+          <Admin/>
+        
       </div>
     );
   }
