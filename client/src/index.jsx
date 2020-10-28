@@ -8,6 +8,9 @@ import Navbar from './Components/Navbar.jsx';
 // import SignIn from './Components/SignIn.jsx';
 import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
+
+import JobOpp from './Components/JobOpp.jsx';
+
 import Client from './Components/Client.jsx';
 // import Events from './Components/EventsList.jsx';
 
@@ -19,8 +22,10 @@ class App extends React.Component {
             <div>
                 {/* <Navbar /> */}
                 {/* <Slide />  */}
-                <Events />
-                {/* <SignUpMyAccount/> */}
+
+                {/* <Events /> */}
+
+                <SignUpMyAccount/>
 
             </div>
         )
