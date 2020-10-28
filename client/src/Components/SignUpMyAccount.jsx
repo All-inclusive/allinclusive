@@ -55,7 +55,7 @@ class SignUpMyAccount extends Component {
 
     return (
       <div>
-        <Container fluid>
+        <Container >
           {this.state.showLogin ? <SignIn RegisterClick={this.RegisterClick} /> : 
           <div>
           <Row>
@@ -202,10 +202,7 @@ class SignUpMyAccount extends Component {
               </Col>
             )}
 
-            <div
-              style={{ borderLeft: "6px solid black", height: "500px" }}
-              class="verticalLine"></div>
-
+            
             {this.state.company && (
               <Col id="company">
                 <h1> Company experience </h1>
