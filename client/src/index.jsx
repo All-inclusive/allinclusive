@@ -7,13 +7,15 @@ import Company from './Components/Company.jsx';
 import JobOpp from './Components/JobOpp.jsx';
 import SignIn from './Components/SignIn.jsx';
 import SignUp from './Components/SignUp.jsx';
-
-
+import Slide from './Components/SlideShow.jsx';
+import Events from './Components/EventsList.jsx';
 class App extends React.Component {
     render(){
         return(
             <div>
-                <Navbar/>
+                <Navbar />
+                <Slide /> 
+                <Events />
             </div>
         )
     }

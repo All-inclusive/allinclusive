@@ -12,7 +12,7 @@ render(){
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                <NavDropdown title="I I I" id="collasible-nav-dropdown">
+                <NavDropdown title="" id="collasible-nav-dropdown">
                     <NavDropdown.Item >Action</NavDropdown.Item>
                         <NavDropdown.Item >Another action</NavDropdown.Item>
                         <NavDropdown.Item >Something</NavDropdown.Item>
