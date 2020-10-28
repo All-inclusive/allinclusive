@@ -80,7 +80,7 @@ router.get('/',async(req,res)=>{
   });
 
 
-  router.delete('/user',async(req,res)=>{
+  router.delete('/',async(req,res)=>{
     await User.deleteMany(req.params.id,req.body)
     res.json({'message':'all data deleted'})
   });

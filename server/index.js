@@ -29,55 +29,11 @@ console.log('Database is connected ')
 
 //Routes middlewares
 app.use('/api/user', require('./routes/auth.js'));
+app.use('/api/event',require('./routes/events.js'))
+app.use('/api/company', require('./routes/company.js'));
 
 
 
-//crud operations for events
-const Event = require('../database/Schema/Events.js');
-
-app.get('/event',async(req,res)=>{
-  await Event.find({},(err,data)=>{
-    res.json(data)
-  })
-});
-
-app.get('/event/:id',async(req,res)=>{
-  await Event.findById(req.params.id,(err,data)=>{
-    res.json(data)
-  })
-})
-
-
-app.post('/event/add',async(req,res)=>{
-  newEvent = new Event ({
-     name: req.body.name,
-     type:req.body.type,
-     place:req.body.place,
-     date:req.body.date,
-     imgUrl :req.body.imgUrl,
-     like :req.body.like,
-     disLike : req.body.disLike
-  })
-  await newEvent.save(()=>{res.json(newEvent)})
-});
-
-
-
-app.delete('/event',async(req,res)=>{
-  await Event.deleteMany(req.params.id,req.body)
-  res.json({'message':'all data deleted'})
-});
-
-
-app.delete('/event/:id',async(req,res)=>{
-  await Event.findByIdAndDelete(req.params.id,req.body)
-  res.json({'message':'specific data deleted'})
-});
-
-app.put('/event/:id',async(req,res)=>{
-  await Event.findByIdAndUpdate(req.params.id,req.body)
-  res.json({'message':'specific data updated'})
-});
 
 //crud operation for company
 const Company = require('../database/Schema/Companies.js');
