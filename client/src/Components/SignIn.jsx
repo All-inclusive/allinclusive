@@ -42,7 +42,7 @@ class SignIn extends React.Component {
         
         return(
 <div>
-    <Container>
+  
         <Col style={{marginTop:'400px'}}>
 
                <div class="login-reg-panel" >
@@ -59,7 +59,7 @@ class SignIn extends React.Component {
            <div class="register-info-box">
 			<h2>Don't have an account?</h2>
 			<p>Lorem ipsum dolor sit amet</p>
-			<label id="label-login" for="log-login-show">Register</label>
+			<label id="label-login" for="log-login-show" onClick={this.props.RegisterClick}>Register</label>
 			<input type="radio" name="active-log-panel" id="log-login-show"/>
 		</div>
 
@@ -82,7 +82,7 @@ class SignIn extends React.Component {
             </div>
 </div>
 </Col>
-</Container>
+
 </div>
         )
     
