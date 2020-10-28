@@ -31,7 +31,7 @@ class JobOpp extends Component {
                     />
                     <path d="M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM9 5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-2-2V5z" />
                   </svg>
-                  Client
+                  Particular
                 </h1>
                 <Form.Label>First name</Form.Label>
                 <Form.Control name="firstName" placeholder="Enter your first name" />
