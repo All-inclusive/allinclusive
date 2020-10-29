@@ -45,6 +45,7 @@ class SignUpMyAccount extends Component {
 
   render() {
     var sectionStyle = {
+      fontSize:'20px',
       width: "50%",
       height: "700px",
       backgroundImage:
@@ -55,13 +56,13 @@ class SignUpMyAccount extends Component {
 
     return (
       <div>
-        <Container >
+        
           {this.state.showLogin ? <SignIn RegisterClick={this.RegisterClick} /> : 
           <div>
           <Row>
             {this.state.showClientSignUp && (
-              <Col xs={6} id="clientSignUp" style={sectionStyle}>
-                <h1>
+              <Container  id="clientSignUp" style={sectionStyle}>
+                <h1 style={{marginBottom:'100px',marginTop:'100px'}}>
                   <svg
                     width="1em"
                     height="1em"
@@ -83,24 +84,25 @@ class SignUpMyAccount extends Component {
                 </h1>
                 <Form>
                   <Form.Row>
-                    <Form.Label>First name</Form.Label>
+                    <Form.Label style={{fontSize:'20px'}}>First name</Form.Label>
                     <Form.Control name="firstName" placeholder="First name" />
 
-                    <Form.Label>Last name</Form.Label>
+                    <Form.Label style={{fontSize:'20px'}}>Last name</Form.Label>
                     <Form.Control name="lastName" placeholder="Last name" />
                   </Form.Row>
                 </Form>
 
-                <Form.Label>Email</Form.Label>
+                <Form.Label style={{fontSize:'20px'}}>Email</Form.Label>
                 <Form.Control name="email" placeholder="Enter email" />
-                <Form.Label>Password</Form.Label>
+                <Form.Label style={{fontSize:'20px'}}>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
-                <Form.Label>Phone number</Form.Label>
+                
+                <Form.Label style={{fontSize:'20px'}}>Phone number</Form.Label>
                 <Form.Control
                   name="phoneNumber"
                   placeholder="Enter your phone number"
                 />
-                <Form.Label>Image URL</Form.Label>
+                <Form.Label style={{fontSize:'20px'}}>Image URL</Form.Label>
                 <Form.Control name="url" placeholder="Enter your image URL" />
                 <Form.Check
                   type="checkbox"
@@ -111,22 +113,19 @@ class SignUpMyAccount extends Component {
                   // onSelect for getting the value
                 />
                 <br></br>
-                <center>
+                
                   <button type="button" class="btn btn-outline-info">
                     Submit
                   </button>
-                </center>
+                
                 <br></br>
                 <br></br>
                 <br></br>
-              </Col>
+              </Container>
             )}
             {this.state.showCompanySignUp && (
-              <Col xs={6} id="companySignUp" style={sectionStyle}>
-                <br></br>
-                <br></br>
-                <br></br>
-                <h1>
+              <Container  id="companySignUp" style={sectionStyle}>
+                <h1  style={{marginBottom:'50px',marginTop:'50px'}}>
                   <svg
                     width="1em"
                     height="1em"
@@ -175,7 +174,7 @@ class SignUpMyAccount extends Component {
                 <br></br>
                 <br></br>
                 <br></br>
-              </Col>
+              </Container>
             )}
           </Row>
           <Row>
@@ -227,7 +226,7 @@ class SignUpMyAccount extends Component {
           </Row>
           </div>
           }
-        </Container>
+        
 
        
 
