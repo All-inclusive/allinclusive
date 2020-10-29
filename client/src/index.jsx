@@ -10,21 +10,43 @@ import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
 import JobOpp from './Components/JobOpp.jsx';
 import Client from './Components/Client.jsx';
+
 import Events from './Components/EventsList.jsx';
 import Filter from './Components/searchBar.jsx'
+
+import Company from './Components/Company.jsx';
+
+
+
+
 
 class App extends React.Component {
 
     render(){
         return(
+
             <div>
                 {/* <Navbar /> */}
                 {/* <Slide />  */}
                 {/* <Events /> */}
+
                 {/* <Events /> */}
                 {/* <BecomeASeller/> */}
                 {/* <SignUpMyAccount/> */}
                 <Filter />
+
+
+
+
+                {/* <BecomeASeller/> */}
+
+                <SignUpMyAccount/>
+
+                <Company/>
+
+
+
+
             </div>
         )
     }
