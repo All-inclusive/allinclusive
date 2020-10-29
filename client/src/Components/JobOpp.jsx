@@ -7,12 +7,12 @@ class JobOpp extends Component {
     render(){
         return (
         
-            <Container  >
+            <div>
                 <br></br>
                 <br></br>
-                <br></br>
-                <Row >
-                <Col>
+                <center>
+                    <Row>
+                <Col style={{fontSize:'20px'}}>
             <h1>
                   <svg
                     width="1em"
@@ -31,7 +31,7 @@ class JobOpp extends Component {
                     />
                     <path d="M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM9 5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-2-2V5z" />
                   </svg>
-                  Client
+                  Particular
                 </h1>
                 <Form.Label>First name</Form.Label>
                 <Form.Control name="firstName" placeholder="Enter your first name" />
@@ -46,29 +46,38 @@ class JobOpp extends Component {
                   name="phoneNumber"
                   placeholder="Enter your phone number"
                 />
+                
+                <Form.Control name="gendre" />
+                <Form.Label>Image URL</Form.Label>
+                <Form.Control name="url" placeholder="Enter your image URL" />
+                </Col>
+                <Col style={{fontSize:'20px'}}>
+                <br></br>
+                <br></br>
+                <br></br>
                 <Form.Label>Weight</Form.Label>
                 <Form.Control name="weight"  />
                 <Form.Label>Height</Form.Label>
                 <Form.Control name="height" />
                 <Form.Label>Age</Form.Label>
                 <Form.Control name="age" />
-                <Form.Label>Email</Form.Label>
-                <Form.Control name="email" placeholder="Enter email" />
-                <Form.Label>Image URL</Form.Label>
-                <Form.Control name="url" placeholder="Enter your image URL" />
-                
+                <Form.Label>Gendre</Form.Label>
                 <br></br>
                 
                   <button type="button" class="btn btn-outline-info">
                     Submit
                   </button>
+                </Col>
+                
+                </Row>
+                
                 
                 <br></br>
                 <br></br>
                 <br></br>
-              </Col>
-              </Row>
-            </Container>
+              
+              </center>
+              </div>
         
         );
     }

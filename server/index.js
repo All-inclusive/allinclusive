@@ -11,13 +11,18 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 //database connection 
-const Url ='mongodb+srv://oussamaheni:oussama23146875@clusterallinclusive.pthxb.mongodb.net/allinclusive?retryWrites=true&w=majority'
+const Url ='mongodb://localhost:27017/allinclusive'
 mongoose.connect(Url,{
   useNewUrlParser:true,
   useUnifiedTopology:true,
   useFindAndModify:false,
   useCreateIndex:true
-}, () => console.log('DB is connected'))
+})
+const Connection = mongoose.connection ;
+Connection.on('error',console.error.bind(console,'connection error:'))
+Connection.once('open',function(){
+console.log('Database is connected ')
+})
 
 //Routes middlewares
 app.use('/api/user', require('./routes/auth.js'));
