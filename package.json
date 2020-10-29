@@ -25,8 +25,12 @@
     "config": "^3.3.2",
     "dotenv": "^8.2.0",
     "express": "^4.15.0",
+
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
+
+    "jquery": "^3.5.1",
+
     "mongoose": "^4.8.6",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
