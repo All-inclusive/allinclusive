@@ -14,7 +14,7 @@ class SideBar extends React.Component {
     return (
        
         <div>
-          <Container>
+          <Container id='sideNav'>
          <Image src="./img/logo.png" roundedCircle /><br></br>
         <br></br>
         <h1 id='div1'>Username </h1>
