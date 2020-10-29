@@ -10,6 +10,8 @@ import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
 import JobOpp from './Components/JobOpp.jsx';
 import Client from './Components/Client.jsx';
+import Company from './Components/Company.jsx';
+
 // import Events from './Components/EventsList.jsx';
 
 
@@ -17,17 +19,14 @@ class App extends React.Component {
 
     render(){
         return(
+
             <div>
                 {/* <Navbar /> */}
                 {/* <Slide />  */}
 
                 {/* <Events /> */}
 
-                <SignUpMyAccount/>
-
-                <BecomeASeller/>
-
-                <SignUpMyAccount/>
+                <Company/>
 
 
             </div>
