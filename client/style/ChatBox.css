@@ -1,0 +1,112 @@
+body {
+    background-color: rgb(253, 250, 253)
+}
+
+::-webkit-scrollbar {
+    width: 10px
+}
+
+::-webkit-scrollbar-track {
+    background: #eee
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #651FFF */
+}
+
+.main {
+    background-image:url('');
+    width: 500px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* +9* */
+}
+
+.scroll {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 500px
+}
+
+.img1 {
+    border-radius: 100%;
+    
+}
+
+.name {
+    font-size: 20px
+}
+
+.msg {
+    background-color: rgb(117, 12, 95);
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #fff0f0
+}
+
+.between {
+    font-size: 20px;
+    font-weight: 500;
+    color: #a09e9e
+}
+
+.navbar {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.form-control {
+    font-size: 20px;
+    font-weight: 400;
+    width: 230px;
+    height: 30px;
+    border: none
+}
+
+.form-control:focus {
+    box-shadow: none;
+    overflow: hidden;
+    border: none
+}
+
+.form-control:focus {
+    box-shadow: none !important
+}
+
+.icon1 {
+   
+    font-size: 20px !important;
+    cursor: pointer
+}
+
+
+
+.icondiv {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    position: relative;
+    bottom: 1px
+}
+button{
+    width: 80px; 
+    height: 70px;
+    
+}

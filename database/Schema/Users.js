@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema(
         phoneNumber : {type:String , required:true},
         specialNeed :{type: Boolean, required:true},
         imgUrl :{type:String , required:true},
+        
         //events  to do later
     },
     {
