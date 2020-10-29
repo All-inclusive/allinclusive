@@ -16,7 +16,7 @@ class Client extends Component {
               <Col>
                 <SideNav/>
               </Col>
-              <Col xs={6} style={{overflowY: "scroll"}}>2 of 3</Col>
+              <Col xs={6} >2 of 3</Col>
               <Col>
               <ChatBox/>
               </Col>
