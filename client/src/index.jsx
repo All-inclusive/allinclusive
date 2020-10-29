@@ -10,7 +10,8 @@ import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
 import JobOpp from './Components/JobOpp.jsx';
 import Client from './Components/Client.jsx';
-// import Events from './Components/EventsList.jsx';
+import Events from './Components/EventsList.jsx';
+import Filter from './Components/searchBar.jsx'
 
 class App extends React.Component {
 
@@ -20,8 +21,10 @@ class App extends React.Component {
                 {/* <Navbar /> */}
                 {/* <Slide />  */}
                 {/* <Events /> */}
-                <BecomeASeller/>
-                <SignUpMyAccount/>
+                {/* <Events /> */}
+                {/* <BecomeASeller/> */}
+                {/* <SignUpMyAccount/> */}
+                <Filter />
             </div>
         )
     }
