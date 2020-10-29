@@ -38,8 +38,8 @@ class Event extends React.Component {
           <div className="type">Type: {this.props.type}</div>
           <div className="place">Place: {this.props.place}</div>
           <div className="date">published: ...</div>
-          <button className="like" onClick={this.addLike}>Likes: {this.state.likes}</button>
-          <button className="dislike" onClick={this.addDislike}>Dislikes: {this.state.dislikes}</button>
+          <button className="like" onClick={this.addLike}>👍: {this.state.likes}</button>
+          <button className="dislike" onClick={this.addDislike}>👎: {this.state.dislikes}</button>
         </ul>
     </div>
   )}
