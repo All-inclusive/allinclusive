@@ -8,7 +8,8 @@ const config = require("config");
 //Validation for user registration
 
 const schema = Joi.object({
-  userName: Joi.string().min(6).required(),
+  firstName: Joi.string().required(),
+  lastName: Joi.string().required(),
   email: Joi.string().min(6).required().email(),
   password: Joi.string().min(6).required(),
   phoneNumber: Joi.number().required(),
@@ -27,7 +28,8 @@ router.post("/add", async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
     const newUser = new User({
-      userName: req.body.userName,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
       password: hashedPassword,
       phoneNumber: req.body.phoneNumber,
@@ -66,35 +68,30 @@ router.post("/login", async (req, res, next) => {
     const token = jwt.sign({ _id: user._id }, config.get("jwt").secret);
     res.header("auth-token", token).json(token);
   } catch (error) {
-    console.log(error);
     if (error.isJoi === true) res.status(400).send(error.details[0].message);
     next(error);
   }
 });
 
+router.get("/", async (req, res) => {
+  await User.find({}, (err, data) => {
+    res.json(data);
+  });
+});
 
-router.get('/',async(req,res)=>{
-    await User.find({},(err,data)=>{
-      res.json(data)
-    })
-  });
+router.delete("/", async (req, res) => {
+  await User.deleteMany(req.params.id, req.body);
+  res.json({ message: "all data deleted" });
+});
 
+router.delete("/:id", async (req, res) => {
+  await User.findByIdAndDelete(req.params.id, req.body);
+  res.json({ message: "specific data deleted" });
+});
 
-  router.delete('/',async(req,res)=>{
-    await User.deleteMany(req.params.id,req.body)
-    res.json({'message':'all data deleted'})
-  });
-  
-  
-  router.delete('/:id',async(req,res)=>{
-    await User.findByIdAndDelete(req.params.id,req.body)
-    res.json({'message':'specific data deleted'})
-  });
-  
-  
-  router.put('/:id',async(req,res)=>{
-    await User.findByIdAndUpdate(req.params.id,req.body)
-    res.json({'message':'specific data updated'})
-  });
+router.put("/:id", async (req, res) => {
+  await User.findByIdAndUpdate(req.params.id, req.body);
+  res.json({ message: "specific data updated" });
+});
 
 module.exports = router;

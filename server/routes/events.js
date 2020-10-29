@@ -2,9 +2,13 @@ const router = require("express").Router();
 const Event = require("../../database/Schema/Events.js");
 
 router.get("/", async (req, res) => {
+  try{
   await Event.find({}, (err, data) => {
     res.json(data);
   });
+}catch(err){
+  res.status(400).send(err)
+}
 });
 
 router.get("/:id", async (req, res) => {
@@ -19,6 +23,7 @@ router.post("/add", async (req, res) => {
     type: req.body.type,
     place: req.body.place,
     date: req.body.date,
+    description:req.body.description,
     imgUrl: req.body.imgUrl,
     like: req.body.like,
     disLike: req.body.disLike,
