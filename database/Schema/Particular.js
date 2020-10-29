@@ -5,11 +5,10 @@ const particularSchema = new mongoose.Schema(
         email : {type:String , required:true},
         password : {type:String , required:true},
         phoneNumber : {type:String , required:true},
-        weight :{type:Number , required:true},
-        height :{type:Number , required:true},
         age :{type:Number , required:true},
         gender : {type:String , required:true},
         imgUrl :{type:String , required:true},
+        description :{type:String , required:true},
         //events
     },
     {
