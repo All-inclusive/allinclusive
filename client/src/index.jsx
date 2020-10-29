@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './Components/Navbar.jsx';
-// import AboutUs from './Components/AboutUs.jsx';
+import Footer from './Components/Footer.jsx';
 import BecomeASeller from './Components/BecomeASeller.jsx';
 // import Company from './Components/Company.jsx';
 // import JobOpp from './Components/JobOpp.jsx';
@@ -24,7 +24,8 @@ class App extends React.Component {
                 {/* <Events /> */}
                 {/* <BecomeASeller/> */}
                 {/* <SignUpMyAccount/> */}
-                <Filter />
+                {/* <Filter /> */}
+                <Footer />
             </div>
         )
     }
