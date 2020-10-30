@@ -42,7 +42,7 @@ class App extends React.Component {
             return(
                 <div>
                     <Navbar changeView={(x)=>this.changeView(x)}/>
-                    <Slide/>                     
+                    <Slide/>                 
                     
                     <center>                   
                     <Filter/>                   
