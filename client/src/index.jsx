@@ -1,13 +1,15 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './Components/Navbar.jsx';
 import Footer from './Components/Footer.jsx';
 import BecomeASeller from './Components/BecomeASeller.jsx';
+
 // import SignIn from './Components/SignIn.jsx';
-import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
-import Slide from './Components/SlideShow.jsx';
-import Filter from './Components/searchBar.jsx';
-import JobOpp from './Components/JobOpp.jsx';
+import SignUpMyAccount from "./Components/SignUpMyAccount.jsx";
+import Slide from "./Components/SlideShow.jsx";
+import Filter from "./Components/searchBar.jsx";
+import JobOpp from "./Components/JobOpp.jsx";
 // import Client from './Components/Client.jsx';
 // import SideNav from './Components/SideNav.jsx';
 import Events from './Components/EventsList.jsx';
@@ -17,24 +19,19 @@ import ScrollArea from 'react-scrollbar';
 
 
 
-
-
-
-
-
-
 class App extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            view: ''
-        }
-        this.changeVeiw= this.changeView.bind(this)
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      view: "",
+    };
+    this.changeVeiw = this.changeView.bind(this);
+  }
 
-    changeView(e){
-        this.setState({view: e})       
-    }
+  changeView(e) {
+    this.setState({ view: e });
+  }
+
 
 
     render(){
@@ -87,5 +84,6 @@ class App extends React.Component {
         
         
     }
+
 }
 ReactDOM.render(<App />, document.getElementById("app"));
