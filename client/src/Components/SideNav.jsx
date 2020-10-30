@@ -9,17 +9,18 @@ class SideBar extends React.Component {
 
   render() {
     const user = this.props.user;
+    const imgStyle = { width: "160px", height: "160px" };
     return (
       <div>
         <Container id="sideNav">
-          <Image src={user.imgUrl} roundedCircle />
+          <Image style={imgStyle} src={user.imgUrl} roundedCircle />
           <br></br>
           <br></br>
-          <h1 id="div1">
-            Username {user.firstName} - {user.lastName}
-          </h1>
-          <h2 id="div2">Email adress {user.email}</h2>
-          <h3 id="div3">Phone number {user.phoneNumber}</h3>
+          <p id="div1">
+            Username: {user.firstName} - {user.lastName}
+          </p>
+          <p id="div2">Email adress: {user.email}</p>
+          <p id="div3">Phone number: {user.phoneNumber}</p>
           {/* <h4 id='div4'>Description </h4> */}
         </Container>
       </div>

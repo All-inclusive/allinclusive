@@ -1,47 +1,58 @@
-import React from 'react';
+import React from "react";
+import axios from "axios";
 
 class Event extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       likes: 0,
-      dislikes: 0
-    }
-    this.addLike=this.addLike.bind(this);
-    this.addDislike=this.addDislike.bind(this);
-  };
-  addLike (e) {
+      dislikes: 0,
+    };
+    this.addLike = this.addLike.bind(this);
+    this.addDislike = this.addDislike.bind(this);
+  }
+
+  addLike(e) {
     let newCount = this.state.likes + 1;
-      this.setState({
-      likes: newCount
+    this.setState({
+      likes: newCount,
     });
     e.preventDefault();
-  };
-  
-  addDislike (e) {
+  }
+
+  addDislike(e) {
     let newCount2 = this.state.dislikes + 1;
-      this.setState({
-      dislikes: newCount2
+    this.setState({
+      dislikes: newCount2,
     });
     e.preventDefault();
-  };
+  }
 
   render() {
-    return (
-      <div className="event">
-        <ul>
-          <img
-          className="imgUrl"
-          src={this.props.imgUrl}
-          />
-          <div className="name">User: {this.props.name}</div>
-          <div className="type">Type: {this.props.type}</div>
-          <div className="place">Place: {this.props.place}</div>
-          <div className="date">published: ...</div>
-          <button className="like" onClick={this.addLike}>👍: {this.state.likes}</button>
-          <button className="dislike" onClick={this.addDislike}>👎: {this.state.dislikes}</button>
-        </ul>
-    </div>
-  )}
+    const imgStyle = { width: "250px", height: "160px" };
+    const events = this.props.eventsArray;
+    console.log("event in render", events);
+    const listOfEvents = events.map((evenement, i) => {
+      return (
+        <div className="event" key={i}>
+          <img style={imgStyle} className="imgUrl" src={evenement.imgUrl} />
+          <div className="name">name: {evenement.name}</div>
+          <div className="type">Type: {evenement.type}</div>
+          <div className="place">Place: {evenement.place}</div>
+          <div className="date">date: {evenement.date}</div>
+          <div className="description">
+            description: {evenement.description}
+          </div>
+          <button className="like" onClick={this.addLike}>
+            👍: {this.state.likes}
+          </button>
+          <button className="dislike" onClick={this.addDislike}>
+            👎: {this.state.dislikes}
+          </button>
+        </div>
+      );
+    });
+    return <div> {listOfEvents} </div>;
+  }
 }
 export default Event;
