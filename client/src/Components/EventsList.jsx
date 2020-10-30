@@ -5,11 +5,30 @@ class Event extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      eventsArray: [],
       likes: 0,
       dislikes: 0,
     };
     this.addLike = this.addLike.bind(this);
     this.addDislike = this.addDislike.bind(this);
+  }
+
+  componentDidMount() {
+    const options = {
+      method: "get",
+      url: "/api/event",
+    };
+    axios(options)
+      .then((response) => {
+        console.log("response", response);
+        this.setState({
+          eventsArray: response.data,
+        });
+        console.log("events in axios", this.state.eventsArray);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   addLike(e) {
@@ -30,7 +49,7 @@ class Event extends React.Component {
 
   render() {
     const imgStyle = { width: "250px", height: "160px" };
-    const events = this.props.eventsArray;
+    const events = this.state.eventsArray;
     console.log("event in render", events);
     const listOfEvents = events.map((evenement, i) => {
       return (
