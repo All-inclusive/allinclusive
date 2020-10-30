@@ -36,7 +36,6 @@ class SignUpMyAccount extends React.Component {
 
   handleChangeSignIn(e) {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state);
   }
 
   addClient(e) {
