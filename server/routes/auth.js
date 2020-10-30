@@ -14,11 +14,12 @@ const schema = Joi.object({
   password: Joi.string().min(6).required(),
   phoneNumber: Joi.number().required(),
   specialNeed: Joi.boolean().required(),
-  imgUrl: Joi.string().min(6).required(),
+  imgUrl: Joi.string().required(),
 });
 
 router.post("/add", async (req, res, next) => {
   //check if user already exist
+  console.log(req.body);
   const emailExist = await User.findOne({ email: req.body.email });
   if (emailExist) return res.status(400).send("Email already exists");
 
