@@ -14,7 +14,7 @@ class Client extends Component {
         <Container fluid>
             <Row>
               <Col>
-                <SideNav/>
+                <SideNav user ={this.props.user}/>
               </Col>
               <Col xs={6} >2 of 3</Col>
               <Col>
