@@ -8,9 +8,7 @@ const Footer = () => {
         <MDBRow>
           <MDBCol md="6">
             <h5 className="title">Contributors:</h5>
-          </MDBCol>
-          <MDBCol md="6">
-            <h5 className="title">   </h5>
+         
             <ul>
               <li className="list-unstyled">
                 <a href="https://github.com/amirabourogaa">Amira Bourogaa</a>
