@@ -63,9 +63,7 @@ class SignIn extends React.Component {
       <div>
         <Col style={{ marginTop: "400px" }}>
           <div class="login-reg-panel">
-            <div class="login-info-box">
-              <h2>Have an account?</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+            <div class="login-info-box">             
               <label id="label-register" for="log-reg-show">
                 Login
               </label>
@@ -79,7 +77,7 @@ class SignIn extends React.Component {
 
             <div class="register-info-box">
               <h2>Don't have an account?</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+              <p>Click Here</p>
               <label
                 id="label-login"
                 for="log-login-show"

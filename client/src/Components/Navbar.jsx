@@ -22,12 +22,12 @@ render(){
                     </Nav>
                 <Nav>
                     <NavDropdown title="Extra" id="collasible-nav-dropdown">
-                        <NavDropdown.Item >Job opportunities</NavDropdown.Item>
-                        <NavDropdown.Item >Become a Seller</NavDropdown.Item>
+                        <NavDropdown.Item  onClick={(e)=>this.props.changeView('Job opportunities')}>Job opportunities</NavDropdown.Item>
+                        <NavDropdown.Item onClick={(e)=>this.props.changeView('Become a Seller')}>Become a Seller</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item >About Us</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link  eventKey='My Account'>
+                    <Nav.Link  eventKey='My Account' onClick={(e)=>this.props.changeView('My Account')}>
                         My Account
                     </Nav.Link>
                 </Nav>
