@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
 import axios from "axios";
 import SignIn from "./SignIn.jsx";
+import Client from "./Client.jsx";
 
 class SignUpMyAccount extends React.Component {
   constructor(props) {
@@ -115,7 +116,7 @@ class SignUpMyAccount extends React.Component {
       height: "900px",
       backgroundImage:
         "url(" +
-        "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
+        "https://img.over-blog-kiwi.com/1/48/86/09/20191101/ob_8e56a6_ob-46b210-ob-36939e-vj56emye0nx7rs-u-k.gif" +
         ")",
     };
 
@@ -234,7 +235,11 @@ class SignUpMyAccount extends React.Component {
               
                 </Container>
               )}
-               
+              
+              {this.state.showLogIn && (
+                    <Client/>
+                  ) }
+                  
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
                   
