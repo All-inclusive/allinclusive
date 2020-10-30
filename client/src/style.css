@@ -27,3 +27,11 @@
     padding: 30px 50px 0px 50px;
     box-shadow: 0 0 1em #80808066;
 }
+.like{
+    border: none;
+    background-color: transparent
+}
+.dislike{
+    border: none;
+    background-color: transparent
+}
