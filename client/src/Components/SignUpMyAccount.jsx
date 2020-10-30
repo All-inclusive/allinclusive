@@ -100,12 +100,12 @@ class SignUpMyAccount extends React.Component {
 
   render() {
     var sectionStyle = {
-      fontSize: "20px",
-      width: "50%",
-      height: "700px",
+      fontSize: "30px",
+      width: "100%",
+      height: "900px",
       backgroundImage:
         "url(" +
-        "https://cdn.pixabay.com/photo/2018/05/20/11/40/flower-3415551_960_720.jpg" +
+        "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
         ")",
     };
 
@@ -118,7 +118,7 @@ class SignUpMyAccount extends React.Component {
             <Row>
               {this.state.showClientSignUp && (
                 <Container id="clientSignUp" style={sectionStyle}>
-                  <h1 style={{ marginBottom: "100px", marginTop: "100px" }}>
+                  <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
                     <svg
                       width="1em"
                       height="1em"
@@ -139,9 +139,18 @@ class SignUpMyAccount extends React.Component {
                     </svg>
                     Client
                   </h1>
+                  
                   <Form>
                     <Form.Row>
-                      <Form.Label style={{ fontSize: "20px" }}>
+                    <Form.Label style={{ fontSize: "30px" }}>
+                       Client type
+                      </Form.Label>
+                      <Form.Control
+                        name="type"
+                        placeholder="passenger or company"
+                        
+                      />
+                      <Form.Label style={{ fontSize: "30px" }}>
                         First name
                       </Form.Label>
                       <Form.Control
@@ -150,7 +159,7 @@ class SignUpMyAccount extends React.Component {
                         onChange={this.handleChangeSignIn}
                       />
 
-                      <Form.Label style={{ fontSize: "20px" }}>
+                      <Form.Label style={{ fontSize: "30px" }}>
                         Last name
                       </Form.Label>
                       <Form.Control
@@ -161,7 +170,7 @@ class SignUpMyAccount extends React.Component {
                     </Form.Row>
                   </Form>
 
-                  <Form.Label style={{ fontSize: "20px" }}>Email</Form.Label>
+                  <Form.Label style={{ fontSize: "30px" }}>Email</Form.Label>
                   <Form.Control
                     name="email"
                     placeholder="Enter email"
@@ -169,7 +178,7 @@ class SignUpMyAccount extends React.Component {
                       this.setState({ email: e.target.value });
                     }}
                   />
-                  <Form.Label style={{ fontSize: "20px" }}>Password</Form.Label>
+                  <Form.Label style={{ fontSize: "30px" }}>Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="password"
@@ -177,7 +186,7 @@ class SignUpMyAccount extends React.Component {
                     onChange={this.handleChangeSignIn}
                   />
 
-                  <Form.Label style={{ fontSize: "20px" }}>
+                  <Form.Label style={{ fontSize: "30px" }}>
                     Phone number
                   </Form.Label>
                   <Form.Control
@@ -185,7 +194,7 @@ class SignUpMyAccount extends React.Component {
                     placeholder="Enter your phone number"
                     onChange={this.handleChangeSignIn}
                   />
-                  <Form.Label style={{ fontSize: "20px" }}>
+                  <Form.Label style={{ fontSize: "30px" }}>
                     Image URL
                   </Form.Label>
                   <Form.Control
@@ -203,23 +212,20 @@ class SignUpMyAccount extends React.Component {
                     custom
                     // onSelect for getting the value
                   />
-                  <br></br>
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-info"
+                  <center>
+                  <button button type="button" class="btn btn-primary btn-lg btn-block"
                     onClick={(e) => this.addClient(e)}
                   >
                     Submit
                   </button>
-
-                  <br></br>
-                  <br></br>
-                  <br></br>
+                  </center>
+                 
+              
                 </Container>
               )}
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
+                  
                   <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
                     <svg
                       width="1em"
@@ -241,6 +247,14 @@ class SignUpMyAccount extends React.Component {
                     </svg>
                     Company
                   </h1>
+                  <Form.Label style={{ fontSize: "30px" }}>
+                       Client type
+                      </Form.Label>
+                      <Form.Control
+                        name="type"
+                        placeholder="passenger or company"
+                        
+                      />
                   <Form.Label>Company name</Form.Label>
                   <Form.Control
                     name="companyName"
@@ -290,17 +304,13 @@ class SignUpMyAccount extends React.Component {
                   />
                   <br></br>
                   <center>
-                    <button
-                      type="button"
-                      class="btn btn-outline-info"
+                    <button button type="button" class="btn btn-primary btn-lg btn-block"
                       onClick={this.addCompany}
                     >
                       Submit
                     </button>
                   </center>
-                  <br></br>
-                  <br></br>
-                  <br></br>
+                  
                 </Container>
               )}
             </Row>
