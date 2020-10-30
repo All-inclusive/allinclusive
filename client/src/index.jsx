@@ -46,6 +46,11 @@ class App extends React.Component {
                     
                     <center>                   
                     <Filter/>                   
+                    <Events/>
+                    <Events/>
+                    <Events/>
+                    <Events/>
+                    <Events/>
                     <Events/>                                                                           
                     </center> 
                     <div>                   
