@@ -12,23 +12,6 @@ class Client extends Component {
       eventsArray: [],
     };
   }
-  componentDidMount() {
-    const options = {
-      method: "get",
-      url: "/api/event",
-    };
-    axios(options)
-      .then((response) => {
-        console.log("response", response);
-        this.setState({
-          eventsArray: response.data,
-        });
-        console.log("events in axios", this.state.eventsArray);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
 
   render() {
     console.log("events in render", this.state.eventsArray);
@@ -40,7 +23,7 @@ class Client extends Component {
               <SideNav user={this.props.user} />
             </Col>
             <Col xs={6}>
-              <EventList eventsArray={this.state.eventsArray} />;
+              <EventList />;
             </Col>
             {/* <Col>
               <ChatBox />
