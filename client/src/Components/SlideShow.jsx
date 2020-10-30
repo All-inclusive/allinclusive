@@ -48,6 +48,14 @@ class Slide extends React.Component {
                     alt="Third slide"
                     />                   
                 </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    
+                    className="d-block"
+                    src="https://www.lediplomate.tn/wp-content/uploads/2018/11/1198547_w-1000_h-625_q-60_m-crop.jpg"
+                    alt="Third slide"
+                    />                   
+                </Carousel.Item>
             </Carousel>
         )
     }

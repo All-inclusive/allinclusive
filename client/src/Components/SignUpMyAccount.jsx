@@ -234,9 +234,7 @@ class SignUpMyAccount extends React.Component {
               
                 </Container>
               )}
-               {this.state.showLogIn && (
-                    <SignIn/>
-                  ) }
+               
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
                   
