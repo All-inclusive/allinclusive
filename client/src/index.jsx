@@ -11,8 +11,11 @@ import JobOpp from './Components/JobOpp.jsx';
 // import Client from './Components/Client.jsx';
 // import SideNav from './Components/SideNav.jsx';
 import Events from './Components/EventsList.jsx';
-
 // import Company from './Components/Company.jsx';
+import ScrollArea from 'react-scrollbar';
+
+
+
 
 
 
@@ -33,20 +36,22 @@ class App extends React.Component {
         this.setState({view: e})       
     }
 
+
     render(){
         if(this.state.view === ''){
             return(
-
                 <div>
                     <Navbar changeView={(x)=>this.changeView(x)}/>
                     <Slide/> 
                     <center>
                     <Filter/>
-                    </center>
-                    <center>
+                    <Events/>
+                    <Events/>
+                    <Events/>
                     <Events/>
                     </center>
-                    <Footer/>
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>                    
+                    <Footer/> 
                 </div>
             )
         }else if (this.state.view === 'My Account'){
@@ -71,6 +76,8 @@ class App extends React.Component {
                 </div>
             )
         }
+        
+        
     }
 }
 ReactDOM.render(<App />, document.getElementById("app"));
