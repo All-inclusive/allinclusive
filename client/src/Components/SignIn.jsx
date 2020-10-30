@@ -108,7 +108,7 @@ class SignIn extends React.Component {
                 <input
                   type="text"
                   name="type"
-                  placeholder="Client type"
+                  placeholder="Passenger or company"
                 />
 
                 <input type="button" value="Login" onClick={this.login} />
