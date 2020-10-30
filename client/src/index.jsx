@@ -38,20 +38,23 @@ class App extends React.Component {
 
 
     render(){
-        if(this.state.view === ''){
+            if(this.state.view === ''){
             return(
                 <div>
                     <Navbar changeView={(x)=>this.changeView(x)}/>
-                    <Slide/> 
-                    <center>
-                    <Filter/>
-                    <Events/>
-                    <Events/>
-                    <Events/>
-                    <Events/>
-                    </center>
-                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>                    
-                    <Footer/> 
+                    <Slide/>                     
+                    
+                    <center>                   
+                    <Filter/>                   
+                    <Events/>                                                                           
+                    </center> 
+                    <div>                   
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> 
+                    <div>                   
+                    <Footer/>
+                    </div> 
+                    </div> 
+                                       
                 </div>
             )
         }else if (this.state.view === 'My Account'){
