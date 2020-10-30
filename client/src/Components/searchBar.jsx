@@ -14,9 +14,9 @@ class Filter extends React.Component {
     //change the data string with the appropriate value 
     onSelect={this.props}
     
-    searchText="This is initial search text"
+    // searchText="Serch"
     classNames="test-class"
-  />
+    />
     )
   }
 }
