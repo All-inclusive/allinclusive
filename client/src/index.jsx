@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Navbar from './Components/Navbar.jsx';
 import Footer from './Components/Footer.jsx';
 import BecomeASeller from './Components/BecomeASeller.jsx';
-// import SignIn from './Components/SignIn.jsx';
+ import SignIn from './Components/SignIn.jsx';
 import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
 import Filter from './Components/searchBar.jsx';
