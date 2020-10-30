@@ -1,6 +1,3 @@
-body{
-    height: 100vh;
-}
 .d-block{
     width: 50%;
     margin-left: 25%;
@@ -12,5 +9,30 @@ body{
 .reload{
     background-color: transparent;
     border: none;
-    color: grey;
+    color: white;
+}
+.col-md-6{
+    margin-left: 46%;
+}
+.row{
+    background-color: rgb(235, 140, 155);
+}
+.event{
+    min-height: 350px;
+    margin: 40px;
+    list-style: none;
+    border: 1px solid #77777769;
+    padding: 30px 50px 0px 50px;
+    box-shadow: 0 0 1em rgba(139, 10, 71, 0.9);
+}
+.like{
+    border: none;
+    background-color: transparent
+}
+.dislike{
+    border: none;
+    background-color: transparent
+}
+.bg-dark{
+    background-color: rgba(139, 10, 71, 0.9) !important;
 }

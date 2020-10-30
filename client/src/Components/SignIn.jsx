@@ -98,6 +98,16 @@ class SignIn extends React.Component {
                   name="active-log-panel"
                   id="log-login-show"
                 />
+
+                <input
+                  type="text"
+                  name="type"
+                  placeholder="Passenger or company"
+                />
+
+                <input type="button" value="Login" onClick={this.login} />
+                <a href="">Forgot password?</a>
+
               </div>
 
               <div class="white-panel">
