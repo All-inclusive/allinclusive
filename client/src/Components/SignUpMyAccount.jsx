@@ -102,7 +102,7 @@ class SignUpMyAccount extends React.Component {
     var sectionStyle = {
       fontSize: "30px",
       width: "100%",
-      height: "800px",
+      height: "900px",
       backgroundImage:
         "url(" +
         "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
@@ -142,6 +142,14 @@ class SignUpMyAccount extends React.Component {
                   
                   <Form>
                     <Form.Row>
+                    <Form.Label style={{ fontSize: "30px" }}>
+                       Client type
+                      </Form.Label>
+                      <Form.Control
+                        name="type"
+                        placeholder="passenger or company"
+                        
+                      />
                       <Form.Label style={{ fontSize: "30px" }}>
                         First name
                       </Form.Label>
@@ -239,6 +247,14 @@ class SignUpMyAccount extends React.Component {
                     </svg>
                     Company
                   </h1>
+                  <Form.Label style={{ fontSize: "30px" }}>
+                       Client type
+                      </Form.Label>
+                      <Form.Control
+                        name="type"
+                        placeholder="passenger or company"
+                        
+                      />
                   <Form.Label>Company name</Form.Label>
                   <Form.Control
                     name="companyName"

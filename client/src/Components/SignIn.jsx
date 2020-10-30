@@ -105,6 +105,12 @@ class SignIn extends React.Component {
                   value={this.state.password}
                   onChange={this.onChange}
                 />
+                <input
+                  type="text"
+                  name="type"
+                  placeholder="Client type"
+                />
+
                 <input type="button" value="Login" onClick={this.login} />
                 <a href="">Forgot password?</a>
               </div>
