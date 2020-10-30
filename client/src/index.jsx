@@ -10,7 +10,7 @@ import Filter from './Components/searchBar.jsx';
 import JobOpp from './Components/JobOpp.jsx';
 // import Client from './Components/Client.jsx';
 // import SideNav from './Components/SideNav.jsx';
-// import Events from './Components/EventsList.jsx';
+import Events from './Components/EventsList.jsx';
 
 // import Company from './Components/Company.jsx';
 
@@ -43,6 +43,10 @@ class App extends React.Component {
                     <center>
                     <Filter/>
                     </center>
+                    <center>
+                    <Events/>
+                    </center>
+                    <Footer/>
                 </div>
             )
         }else if (this.state.view === 'My Account'){
@@ -67,9 +71,6 @@ class App extends React.Component {
                 </div>
             )
         }
-        
-        
     }
-
 }
 ReactDOM.render(<App />, document.getElementById("app"));
