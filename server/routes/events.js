@@ -33,6 +33,12 @@ router.post("/add", async (req, res) => {
   });
 });
 
+router.post("/addmany", async (req, res) => {
+  console.log(req.body);
+  await Event.insertMany(req.body);
+  res.json(" all data saved");
+});
+
 router.delete("/", async (req, res) => {
   await Event.deleteMany(req.params.id, req.body);
   res.json({ message: "all data deleted" });
