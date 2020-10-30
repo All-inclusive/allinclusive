@@ -1,4 +1,3 @@
-
 .d-block{
     width: 50%;
     margin-left: 25%;
@@ -10,22 +9,21 @@
 .reload{
     background-color: transparent;
     border: none;
-    color: grey;
+    color: white;
 }
 .col-md-6{
     margin-left: 46%;
 }
 .row{
-    background-color: lightgrey;
+    background-color: rgb(235, 140, 155);
 }
 .event{
     min-height: 350px;
     margin: 40px;
     list-style: none;
     border: 1px solid #77777769;
-    /* border-radius: 4px; */
     padding: 30px 50px 0px 50px;
-    box-shadow: 0 0 1em #80808066;
+    box-shadow: 0 0 1em rgba(139, 10, 71, 0.9);
 }
 .like{
     border: none;
@@ -34,4 +32,7 @@
 .dislike{
     border: none;
     background-color: transparent
+}
+.bg-dark{
+    background-color: rgba(139, 10, 71, 0.9) !important;
 }
