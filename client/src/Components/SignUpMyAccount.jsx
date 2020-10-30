@@ -32,6 +32,7 @@ class SignUpMyAccount extends React.Component {
     this.addClient = this.addClient.bind(this);
     this.handleChangeSignIn = this.handleChangeSignIn.bind(this);
     this.addCompany = this.addCompany.bind(this);
+    this.submitClicked=this.submitClicked.bind(this)
   }
 
   handleChangeSignIn(e) {
@@ -88,8 +89,18 @@ class SignUpMyAccount extends React.Component {
       showLogin: false,
     });
   }
+  // the button submit for sign up section 
+  submitClicked(){
+    this.setState({
+      showLogIn : true,
+      showClientSignUp : false
+    })
+  }
+
   RegisterClick() {
     this.setState({
+      showLogIn : false,
+      
       client: true,
       company: true,
       showClientSignUp: false,
@@ -117,6 +128,7 @@ class SignUpMyAccount extends React.Component {
           <div>
             <Row>
               {this.state.showClientSignUp && (
+
                 <Container id="clientSignUp" style={sectionStyle}>
                   <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
                     <svg
@@ -214,7 +226,7 @@ class SignUpMyAccount extends React.Component {
                   />
                   <center>
                   <button button type="button" class="btn btn-primary btn-lg btn-block"
-                    onClick={(e) => this.addClient(e)}
+                    onClick={(e) => this.addClient(e),this.submitClicked}
                   >
                     Submit
                   </button>
@@ -223,6 +235,9 @@ class SignUpMyAccount extends React.Component {
               
                 </Container>
               )}
+               {this.state.showLogIn && (
+                    <SignIn/>
+                  ) }
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
                   
