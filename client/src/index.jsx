@@ -8,11 +8,12 @@ import SignUpMyAccount from './Components/SignUpMyAccount.jsx';
 import Slide from './Components/SlideShow.jsx';
 import Filter from './Components/searchBar.jsx';
 import JobOpp from './Components/JobOpp.jsx';
-
 // import Client from './Components/Client.jsx';
 // import SideNav from './Components/SideNav.jsx';
-// import Events from './Components/EventsList.jsx';
+import Events from './Components/EventsList.jsx';
 // import Company from './Components/Company.jsx';
+import ScrollArea from 'react-scrollbar';
+
 
 
 
@@ -44,7 +45,13 @@ class App extends React.Component {
                     <Slide/> 
                     <center>
                     <Filter/>
+                    <Events/>
+                    <Events/>
+                    <Events/>
+                    <Events/>
                     </center>
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>                    
+                    <Footer/> 
                 </div>
             )
         }else if (this.state.view === 'My Account'){
