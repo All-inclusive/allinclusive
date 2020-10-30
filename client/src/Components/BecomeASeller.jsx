@@ -5,11 +5,23 @@ import { Col, Container, Form, Image, Row } from "react-bootstrap";
 
 class BecomeASeller extends React.Component {
     render(){
+      
+      var sectionStyle = {
+        fontSize: "30px",
+        width: "100%",
+        height: "600px",
+        backgroundImage:
+          "url(" +
+          "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
+          ")",
+      };
+
         return (
        <div>
            <br></br>
                 <br></br>
                 <center>
+                  <Container style={sectionStyle}>
                     <Row>
                 <Col style={{fontSize:'20px'}}>
             <h1>
@@ -46,22 +58,18 @@ class BecomeASeller extends React.Component {
                   placeholder="Enter your phone number"
                 />
                 
-                <Form.Control  />
+                
                 <Form.Label>Image URL</Form.Label>
                 <Form.Control name="url" placeholder="Enter your image URL" /><br></br>
-                <button type="button" class="btn btn-outline-info">
+                <button type="button" class="btn btn-dark">
                     Submit
                   </button>
                 </Col>
                 
                 </Row>
-                
-                
-                <br></br>
-                <br></br>
-                <br></br>
+                </Container> 
+                </center>           
               
-              </center>
        </div>
         )
     }
