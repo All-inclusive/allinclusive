@@ -18,17 +18,21 @@ class Client extends Component {
     return (
       <div>
         <Container fluid>
+          <div className='row2'>
           <Row>
             <Col>
               <SideNav user={this.props.user} />
+              <ChatBox />
+            </Col>
+            <Col>
+              
             </Col>
             <Col xs={6}>
               <EventList />;
             </Col>
-            {/* <Col>
-              <ChatBox />
-            </Col> */}
+
           </Row>
+          </div>
         </Container>
       </div>
     );

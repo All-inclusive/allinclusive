@@ -4,15 +4,18 @@ import $ from "jquery";
 import { Col, Container } from "react-bootstrap";
 import axios from "axios";
 import Client from "./Client.jsx";
+import Company from "./Company.jsx";
 
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       user: {},
+      company: {},
       view: "",
       email: "",
       password: "",
+      type: "",
     };
     this.login = this.login.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -27,19 +30,32 @@ class SignIn extends React.Component {
   }
 
   login() {
-    const user = {
-      email: this.state.email,
-      password: this.state.password,
-    };
-    // console.log(user);
-    axios.post("/api/user/login", user).then((result) => {
-      console.log(result.data);
-      this.setState({
-        user: result.data,
-        view: "client",
+    if (this.state.type === "client") {
+      const user = {
+        email: this.state.email,
+        password: this.state.password,
+      };
+      axios.post("/api/user/login", user).then((result) => {
+        console.log(result.data);
+        this.setState({
+          user: result.data,
+          view: "client",
+        });
+        console.log("this.state.company", this.state.company);
       });
-      console.log("this.state.user", this.state.user);
-    });
+    } else if (this.state.type === "company") {
+      const company = {
+        emailCompany: this.state.email,
+        passwordCompany: this.state.password,
+      };
+      axios.post("/api/company/login", company).then((result) => {
+        this.setState({
+          company: result.data,
+          view: "company",
+        });
+        console.log("this.state.company", this.state.company);
+      });
+    }
   }
 
   componentDidMount() {
@@ -94,21 +110,13 @@ class SignIn extends React.Component {
                   Register
                 </label>
                 <input
-                  type="text"
-                  name="type"
-                  placeholder="Passenger or company"
-                />
 
-                <input
                   type="radio"
                   name="active-log-panel"
                   id="log-login-show"
                 />
 
-               
-                <input type="button" value="Login" onClick={this.login} />
                 <a href="">Forgot password?</a>
-
               </div>
 
               <div class="white-panel">
@@ -126,6 +134,13 @@ class SignIn extends React.Component {
                     name="password"
                     placeholder="Password"
                     value={this.state.password}
+                    onChange={this.onChange}
+                  />
+                  <input
+                    type="text"
+                    name="type"
+                    placeholder="type"
+                    value={this.state.type}
                     onChange={this.onChange}
                   />
                   <input type="button" value="Login" onClick={this.login} />
@@ -148,6 +163,12 @@ class SignIn extends React.Component {
       return (
         <div>
           <Client user={this.state.user} />
+        </div>
+      );
+    } else if (this.state.view === "company") {
+      return (
+        <div>
+          <Company company={this.state.company} />
         </div>
       );
     }

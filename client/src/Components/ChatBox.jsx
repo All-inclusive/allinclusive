@@ -9,7 +9,6 @@ export default class ChatBox extends Component {
                 <Container>
                    <Row>
                <div class="wrapper">
-               <h1>Welcome </h1>
     <div class="main" >
     
         <div class="px-2 scroll">

@@ -7,16 +7,13 @@ class Filter extends React.Component {
     super(props);
   }
   render(){
-    console.log(this.props);
+    console.log(this.props.onChange);
     return(
       <SearchField
-    placeholder="Search..."
-    //change the data string with the appropriate value 
-    onSelect={this.props}
-    
-    // searchText="Serch"
-    classNames="test-class"
-    />
+      placeholder="Search..."
+      onChange={this.onChange}
+      classNames="test-class"
+      />  
     )
   }
 }

@@ -8,6 +8,7 @@ const config = require("config");
 //Validation for user registration
 
 const schema = Joi.object({
+  type: Joi.string().required(),
   firstName: Joi.string().required(),
   lastName: Joi.string().required(),
   email: Joi.string().min(6).required().email(),
@@ -29,6 +30,7 @@ router.post("/add", async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
     const newUser = new User({
+      type:req.body.type,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,

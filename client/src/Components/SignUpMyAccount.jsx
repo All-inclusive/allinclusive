@@ -14,6 +14,7 @@ class SignUpMyAccount extends React.Component {
       showCompanySignUp: false,
       showLogin: true,
       //sign up for client
+      type: "",
       firstName: "",
       lastName: "",
       email: "",
@@ -43,6 +44,7 @@ class SignUpMyAccount extends React.Component {
   addClient(e) {
     e.preventDefault();
     const newUser = {
+      type: this.state.type,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
@@ -58,6 +60,7 @@ class SignUpMyAccount extends React.Component {
   addCompany(e) {
     e.preventDefault();
     const newCompany = {
+      type: this.state.type,
       name: this.state.name,
       emailCompany: this.state.emailCompany,
       passwordCompany: this.state.passwordCompany,
@@ -151,16 +154,16 @@ class SignUpMyAccount extends React.Component {
                     </svg>
                     Client
                   </h1>
-                  
+
                   <Form>
                     <Form.Row>
-                    <Form.Label style={{ fontSize: "30px" }}>
-                       Client type
+                      <Form.Label style={{ fontSize: "30px" }}>
+                        Client type
                       </Form.Label>
                       <Form.Control
                         name="type"
-                        placeholder="passenger or company"
-                        
+                        placeholder="company"
+                        onChange={this.handleChangeSignIn}
                       />
                       <Form.Label style={{ fontSize: "30px" }}>
                         First name
@@ -225,14 +228,17 @@ class SignUpMyAccount extends React.Component {
                     // onSelect for getting the value
                   />
                   <center>
-                  <button button type="button" class="btn btn-primary btn-lg btn-block"
-                    onClick={(e) => this.addClient(e),this.submitClicked}
-                  >
-                    Submit
-                  </button>
+
+                    <button
+                      button
+                      type="button"
+                      class="btn btn-primary btn-lg btn-block"
+                      onClick={(e) => this.addClient(e)}
+                    >
+                      Submit
+                    </button>
+
                   </center>
-                 
-              
                 </Container>
               )}
               
@@ -242,7 +248,6 @@ class SignUpMyAccount extends React.Component {
                   
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
-                  
                   <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
                     <svg
                       width="1em"
@@ -265,13 +270,13 @@ class SignUpMyAccount extends React.Component {
                     Company
                   </h1>
                   <Form.Label style={{ fontSize: "30px" }}>
-                       Client type
-                      </Form.Label>
-                      <Form.Control
-                        name="type"
-                        placeholder="passenger or company"
-                        
-                      />
+                    Client type
+                  </Form.Label>
+                  <Form.Control
+                    name="type"
+                    placeholder="company"
+                    onChange={this.handleChangeSignIn}
+                  />
                   <Form.Label>Company name</Form.Label>
                   <Form.Control
                     name="companyName"
@@ -321,13 +326,15 @@ class SignUpMyAccount extends React.Component {
                   />
                   <br></br>
                   <center>
-                    <button button type="button" class="btn btn-primary btn-lg btn-block"
+                    <button
+                      button
+                      type="button"
+                      class="btn btn-primary btn-lg btn-block"
                       onClick={this.addCompany}
                     >
                       Submit
                     </button>
                   </center>
-                  
                 </Container>
               )}
             </Row>
