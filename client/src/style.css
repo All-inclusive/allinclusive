@@ -14,6 +14,9 @@
 .col-md-6{
     margin-left: 46%;
 }
+.col-6{
+    background-color: white !important;
+}
 .row{
     background-color: rgb(235, 140, 155);
 }

@@ -9,7 +9,7 @@ import SignUpMyAccount from "./Components/SignUpMyAccount.jsx";
 import Slide from "./Components/SlideShow.jsx";
 import Filter from "./Components/searchBar.jsx";
 import JobOpp from "./Components/JobOpp.jsx";
-// import Client from './Components/Client.jsx';
+import Client from './Components/Client.jsx';
 // import SideNav from './Components/SideNav.jsx';
 import EventsList from "./Components/EventsList.jsx";
 // import Company from './Components/Company.jsx';
@@ -74,6 +74,7 @@ class App extends React.Component {
         </div>
       );
     }
+
   }
 }
 ReactDOM.render(<App />, document.getElementById("app"));
