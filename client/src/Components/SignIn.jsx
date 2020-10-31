@@ -115,13 +115,6 @@ class SignIn extends React.Component {
                   id="log-login-show"
                 />
 
-                <input
-                  type="text"
-                  name="type"
-                  placeholder="Passenger or company"
-                />
-
-                <input type="button" value="Login" onClick={this.login} />
                 <a href="">Forgot password?</a>
               </div>
 
