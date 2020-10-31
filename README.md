@@ -66,46 +66,46 @@ attendant
 
 ## this is the structur of oure project
  - client
-        |
-        |__ dist
-        |       |__img
-        |
-        |__ src
-        |     |__ Components
-        |     |             |__ BecomeASeller
-        |     |             |
-        |     |             |__ chatBow
-        |     |             |
-        |     |             |__ client
-        |     |             |
-        |     |             |__ company
-        |     |             |
-        |     |             |__ EventList
-        |     |             |
-        |     |             |__ Footer
-        |     |             |
-        |     |             |__ JobOpp
-        |     |             |
-        |     |             |__ navbar
-        |     |             |
-        |     |             |__ searchBar
-        |     |             |
-        |     |             |__ sideNav
-        |     |             |
-        |     |             |__ signIn
-        |     |             |
-        |     |             |__ SignUp My account
-        |     |             |
-        |     |             |__ slideShow
-        |     |             |
-        |     |             |__ particular
-        |     |__ index     | 
-        |__style            |__ seller
- -config
- -database
- -server
-       |
-       |__routes
+ -      |
+ -      |__ dist
+ -      |       |__img
+ -      |
+ -      |__ src
+ -      |     |__ Components
+ -      |     |             |__ BecomeASeller
+ -      |     |             |
+ -      |     |             |__ chatBow
+ -      |     |             |
+ -      |     |             |__ client
+ -      |     |             |
+ -      |     |             |__ company
+ -      |     |             |
+ -      |     |             |__ EventList
+ -      |     |             |
+ -      |     |             |__ Footer
+ -      |     |             |
+ -      |     |             |__ JobOpp
+ -      |     |             |
+ -      |     |             |__ navbar
+ -      |     |             |
+ -      |     |             |__ searchBar
+ -      |     |             |
+ -      |     |             |__ sideNav
+ -      |     |             |
+ -      |     |             |__ signIn
+ -      |     |             |
+ -      |     |             |__ SignUp My account
+ -      |     |             |
+ -      |     |             |__ slideShow
+ -      |     |             |
+ -      |     |             |__ particular
+ -      |     |__ index     | 
+ -      |__style            |__ seller
+ --config
+ --database
+ --server
+ -     |
+ -     |__routes
 
         
         
