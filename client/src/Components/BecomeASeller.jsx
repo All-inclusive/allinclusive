@@ -1,9 +1,24 @@
 import React from 'react';
 
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
+import SignIn from "./SignIn.jsx";
 
 
 class BecomeASeller extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+      showLogIn : false,
+      showSignUp : true
+    }
+    this.submitClicked=this.submitClicked.bind(this)
+  }
+  submitClicked(){
+    this.setState({
+      showLogIn : true,
+      showSignUp : false
+    })
+  }
     render(){
       
       var sectionStyle = {
@@ -21,6 +36,7 @@ class BecomeASeller extends React.Component {
            <br></br>
                 <br></br>
                 <center>
+                  {this.state.showSignUp && (
                   <Container style={sectionStyle}>
                     <Row>
                 <Col style={{fontSize:'20px'}}>
@@ -61,13 +77,17 @@ class BecomeASeller extends React.Component {
                 
                 <Form.Label>Image URL</Form.Label>
                 <Form.Control name="url" placeholder="Enter your image URL" /><br></br>
-                <button type="button" class="btn btn-dark">
+                <button type="button" class="btn btn-dark" onClick = {this.submitClicked}>
                     Submit
                   </button>
                 </Col>
                 
                 </Row>
                 </Container> 
+                  )}
+                  {this.state.showLogIn && (
+                    <SignIn/>
+                  ) }
                 </center>           
               
        </div>

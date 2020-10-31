@@ -6,22 +6,28 @@ import ChatBox from './ChatBox.jsx'
 
 class Company extends Component  {
     render(){
-        return (
+      console.log("events in render", this.state.eventsArray);
+      return (
         <div>
-        <Container fluid>
+          <Container fluid>
+            <div className='row2'>
             <Row>
               <Col>
-                <SideNav/>
+                <SideNav company={this.props.company} />
+                <ChatBox />
               </Col>
-              <Col xs={6} >2 of 3</Col>
               <Col>
-              <ChatBox/>
+                
               </Col>
+              <Col xs={6}>
+                <EventList />;
+              </Col>
+              
             </Row>
+            </div>
           </Container>
-
-      </div>
-    )
+        </div>
+      );
     }
-}
+  }
 export default Company;
