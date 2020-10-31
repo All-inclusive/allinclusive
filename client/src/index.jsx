@@ -12,7 +12,7 @@ import JobOpp from "./Components/JobOpp.jsx";
 import Client from './Components/Client.jsx';
 // import SideNav from './Components/SideNav.jsx';
 import EventsList from "./Components/EventsList.jsx";
-// import Company from './Components/Company.jsx';
+import Company from './Components/Company.jsx';
 import ScrollArea from "react-scrollbar";
 
 class App extends React.Component {
@@ -76,5 +76,6 @@ class App extends React.Component {
     }
 
   }
+  
 }
 ReactDOM.render(<App />, document.getElementById("app"));

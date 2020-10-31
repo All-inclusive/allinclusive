@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import SideNav from "./SideNav.jsx";
 import { Col, Container, Row } from "react-bootstrap";
-import ChatBox from './ChatBox.jsx'
+import ChatBox from "./ChatBox.jsx";
+import EventsList from "./EventsList.jsx";
+
 
 
 class Company extends Component  {
@@ -31,3 +33,4 @@ class Company extends Component  {
     }
   }
 export default Company;
+

@@ -7,11 +7,11 @@ class Slide extends React.Component {
      render(){
          
          return(
-            <Carousel>
+            <Carousel >
                 <Carousel.Item>
                     <img
                     className="d-block"
-                    src="https://www.barcelo.com/pinandtravel/wp-content/uploads/2019/11/best-things-to-do-in-tunisia_tunis-city-tour.jpg"
+                    src="https://lh3.googleusercontent.com/proxy/izKVS_E_b7iTg7OMAMq2irJTZYjxPIA3DwlSuJmLXOC-18o8fm6zJAkyYjtdRmWrBm2HVSAjMGdUB0M6KyTEsy_AE6W8SQRv35x8D_UhAXqPtjPgQm3rhnM9qTfNQwqOQhU"
                     alt="First slide"
                     />
                    
@@ -37,6 +37,22 @@ class Slide extends React.Component {
                     <img
                     className="d-block"
                     src="https://www.planetware.com/photos-large/TUN/tunisia-kairouan-skyline-of-mosques.jpg"
+                    alt="Third slide"
+                    />                   
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    
+                    className="d-block"
+                    src="https://media.timeout.com/images/105490665/630/472/image.jpg"
+                    alt="Third slide"
+                    />                   
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    
+                    className="d-block"
+                    src="https://www.lediplomate.tn/wp-content/uploads/2018/11/1198547_w-1000_h-625_q-60_m-crop.jpg"
                     alt="Third slide"
                     />                   
                 </Carousel.Item>
