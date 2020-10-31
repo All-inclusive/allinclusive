@@ -9,17 +9,18 @@ class Company extends Component {
     return (
       <div>
         <Container fluid>
-          <Row>
-            <Col>
-              <SideNav company={this.props.company} />
-            </Col>
-            <Col xs={6}>
-              <EventsList />
-            </Col>
-            {/* <Col>
-              <ChatBox/>
-              </Col> */}
-          </Row>
+          <div className="row2">
+            <Row>
+              <Col>
+                <SideNav company={this.props.company} />
+                <ChatBox />
+              </Col>
+              <Col></Col>
+              <Col xs={6}>
+                <EventsList />;
+              </Col>
+            </Row>
+          </div>
         </Container>
       </div>
     );

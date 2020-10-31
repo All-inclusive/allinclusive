@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "react-dev": "webpack -w",
+    "react-dev": "webpack --watch ",
     "server-dev": "nodemon server/index.js"
   },
   "author": "project pair",
@@ -37,6 +37,7 @@
     "react-perfect-scrollbar": "^1.5.8",
     "react-scrollbar": "^0.5.6",
     "react-search-field": "^1.1.0",
+    "react-sound": "^1.2.0",
     "style-loader": "^2.0.0"
   }
 }
