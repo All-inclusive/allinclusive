@@ -25,10 +25,7 @@ class JobOpp extends Component {
         fontSize: "30px",
         width: "100%",
         height: "600px",
-        backgroundImage:
-          "url(" +
-          "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
-          ")",
+       
       };
         return (
         

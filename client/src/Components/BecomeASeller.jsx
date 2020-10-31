@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
-import SignIn from "./SignIn.jsx";
+import Client from "./Client.jsx";
 
 
 class BecomeASeller extends React.Component {
@@ -25,10 +25,7 @@ class BecomeASeller extends React.Component {
         fontSize: "30px",
         width: "100%",
         height: "600px",
-        backgroundImage:
-          "url(" +
-          "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
-          ")",
+       
       };
 
         return (
@@ -85,9 +82,7 @@ class BecomeASeller extends React.Component {
                 </Row>
                 </Container> 
                   )}
-                  {this.state.showLogIn && (
-                    <SignIn/>
-                  ) }
+                  
                 </center>           
               
        </div>

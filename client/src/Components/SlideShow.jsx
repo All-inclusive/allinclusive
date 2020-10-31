@@ -1,17 +1,25 @@
-import React from 'react';
-import render from 'react-dom';
+
+import React, { Component } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 
-class Slide extends React.Component {
+
+
+class Slide extends Component {
+
+    
+    
     
      render(){
+
+        
          
          return(
-            <Carousel>
+            <Carousel >
+                
                 <Carousel.Item>
                     <img
                     className="d-block"
-                    src="https://www.barcelo.com/pinandtravel/wp-content/uploads/2019/11/best-things-to-do-in-tunisia_tunis-city-tour.jpg"
+                    src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/123136888_10158906221036031_2675017835064326862_o.jpg?_nc_cat=108&ccb=2&_nc_sid=730e14&_nc_ohc=sueWpE_Q4I0AX-uVK9D&_nc_ht=scontent.ftun2-1.fna&oh=dec144e54e55e613e4e8b49c08ae9a0d&oe=5FC0F262"
                     alt="First slide"
                     />
                    
@@ -37,6 +45,22 @@ class Slide extends React.Component {
                     <img
                     className="d-block"
                     src="https://www.planetware.com/photos-large/TUN/tunisia-kairouan-skyline-of-mosques.jpg"
+                    alt="Third slide"
+                    />                   
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    
+                    className="d-block"
+                    src="https://media.timeout.com/images/105490665/630/472/image.jpg"
+                    alt="Third slide"
+                    />                   
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    
+                    className="d-block"
+                    src="https://www.lediplomate.tn/wp-content/uploads/2018/11/1198547_w-1000_h-625_q-60_m-crop.jpg"
                     alt="Third slide"
                     />                   
                 </Carousel.Item>

@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
 import axios from "axios";
 import SignIn from "./SignIn.jsx";
+import Client from "./Client.jsx";
 
 class SignUpMyAccount extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class SignUpMyAccount extends React.Component {
       showCompanySignUp: false,
       showLogin: true,
       //sign up for client
+      type: "",
       firstName: "",
       lastName: "",
       email: "",
@@ -32,6 +34,7 @@ class SignUpMyAccount extends React.Component {
     this.addClient = this.addClient.bind(this);
     this.handleChangeSignIn = this.handleChangeSignIn.bind(this);
     this.addCompany = this.addCompany.bind(this);
+    this.submitClicked = this.submitClicked.bind(this);
   }
 
   handleChangeSignIn(e) {
@@ -41,6 +44,7 @@ class SignUpMyAccount extends React.Component {
   addClient(e) {
     e.preventDefault();
     const newUser = {
+      type: this.state.type,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
@@ -56,6 +60,7 @@ class SignUpMyAccount extends React.Component {
   addCompany(e) {
     e.preventDefault();
     const newCompany = {
+      type: this.state.type,
       name: this.state.name,
       emailCompany: this.state.emailCompany,
       passwordCompany: this.state.passwordCompany,
@@ -64,9 +69,15 @@ class SignUpMyAccount extends React.Component {
       imgUrlCompany: this.state.imgUrlCompany,
     };
     console.log(newCompany);
-    axios.post("/api/company/add", newCompany).then((result) => {
-      console.log(result);
-    });
+    axios
+      .post("/api/company/add", newCompany)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err);
+      });
   }
 
   clicked() {
@@ -87,8 +98,18 @@ class SignUpMyAccount extends React.Component {
       showLogin: false,
     });
   }
+  // the button submit for sign up section
+  submitClicked() {
+    this.setState({
+      showLogIn: true,
+      showClientSignUp: false,
+    });
+  }
+
   RegisterClick() {
     this.setState({
+      showLogIn: false,
+
       client: true,
       company: true,
       showClientSignUp: false,
@@ -104,7 +125,7 @@ class SignUpMyAccount extends React.Component {
       height: "900px",
       backgroundImage:
         "url(" +
-        "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
+        "https://img.over-blog-kiwi.com/1/48/86/09/20191101/ob_8e56a6_ob-46b210-ob-36939e-vj56emye0nx7rs-u-k.gif" +
         ")",
     };
 
@@ -138,16 +159,16 @@ class SignUpMyAccount extends React.Component {
                     </svg>
                     Client
                   </h1>
-                  
+
                   <Form>
                     <Form.Row>
-                    <Form.Label style={{ fontSize: "30px" }}>
-                       Client type
+                      <Form.Label style={{ fontSize: "30px" }}>
+                        Client type
                       </Form.Label>
                       <Form.Control
                         name="type"
-                        placeholder="passenger or company"
-                        
+                        placeholder="company"
+                        onChange={this.handleChangeSignIn}
                       />
                       <Form.Label style={{ fontSize: "30px" }}>
                         First name
@@ -212,19 +233,22 @@ class SignUpMyAccount extends React.Component {
                     // onSelect for getting the value
                   />
                   <center>
-                  <button button type="button" class="btn btn-primary btn-lg btn-block"
-                    onClick={(e) => this.addClient(e)}
-                  >
-                    Submit
-                  </button>
+                    <button
+                      button
+                      type="button"
+                      class="btn btn-primary btn-lg btn-block"
+                      onClick={(e) => this.addClient(e)}
+                    >
+                      Submit
+                    </button>
                   </center>
-                 
-              
                 </Container>
               )}
+
+              {this.state.showLogIn && <Client />}
+
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
-                  
                   <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
                     <svg
                       width="1em"
@@ -247,13 +271,13 @@ class SignUpMyAccount extends React.Component {
                     Company
                   </h1>
                   <Form.Label style={{ fontSize: "30px" }}>
-                       Client type
-                      </Form.Label>
-                      <Form.Control
-                        name="type"
-                        placeholder="passenger or company"
-                        
-                      />
+                    Client type
+                  </Form.Label>
+                  <Form.Control
+                    name="type"
+                    placeholder="company"
+                    onChange={this.handleChangeSignIn}
+                  />
                   <Form.Label>Company name</Form.Label>
                   <Form.Control
                     name="companyName"
@@ -303,13 +327,15 @@ class SignUpMyAccount extends React.Component {
                   />
                   <br></br>
                   <center>
-                    <button button type="button" class="btn btn-primary btn-lg btn-block"
+                    <button
+                      button
+                      type="button"
+                      class="btn btn-primary btn-lg btn-block"
                       onClick={this.addCompany}
                     >
                       Submit
                     </button>
                   </center>
-                  
                 </Container>
               )}
             </Row>

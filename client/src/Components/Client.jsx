@@ -30,7 +30,7 @@ class Client extends Component {
             <Col xs={6}>
               <EventList />;
             </Col>
-            
+
           </Row>
           </div>
         </Container>

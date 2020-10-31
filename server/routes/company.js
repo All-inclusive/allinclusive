@@ -8,6 +8,7 @@ const config = require("config");
 //Validation for company registration
 
 const schema = Joi.object({
+  type: Joi.string().min(6).required(),
   name: Joi.string().min(6).required(),
   emailCompany: Joi.string().min(6).required().email(),
   passwordCompany: Joi.string().min(6).required(),
@@ -28,6 +29,7 @@ router.post("/add", async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(req.body.passwordCompany, salt);
 
     const newCompany = new Company({
+      type: req.body.type,
       name: req.body.name,
       emailCompany: req.body.emailCompany,
       passwordCompany: hashedPassword,
@@ -52,19 +54,25 @@ const loginschema = Joi.object({
 });
 
 router.post("/login", async (req, res, next) => {
+  console.log("from server", req.body);
   //check if user already exist
   try {
     const { error } = await loginschema.validateAsync(req.body);
-    const company = await Company.findOne({ email: req.body.email });
+    const company = await Company.findOne({
+      emailCompany: req.body.emailCompany,
+    });
     if (!company) return res.status(400).send("Email or password is wrong");
 
     //check password
-    const validPass = await bcrypt.compare(req.body.password, company.password);
+    const validPass = await bcrypt.compare(
+      req.body.passwordCompany,
+      company.passwordCompany
+    );
     if (!validPass) return res.status(400).send("password not valid");
 
     //create and assign a token
     const token = jwt.sign({ _id: company._id }, config.get("jwt").secret);
-    res.header("auth-token", token).json(token);
+    res.header("auth-token", token).json(company);
   } catch (error) {
     console.log(error);
     if (error.isJoi === true) res.status(400).send(error.details[0].message);
