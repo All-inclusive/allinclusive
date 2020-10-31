@@ -18,6 +18,7 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/add", async (req, res) => {
+  console.log(req.body);
   newEvent = new Event({
     name: req.body.name,
     type: req.body.type,
@@ -34,7 +35,6 @@ router.post("/add", async (req, res) => {
 });
 
 router.post("/addmany", async (req, res) => {
-  console.log(req.body);
   await Event.insertMany(req.body);
   res.json(" all data saved");
 });

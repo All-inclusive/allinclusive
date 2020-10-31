@@ -49,7 +49,7 @@ class Event extends React.Component {
 
   render() {
     const imgStyle = { width: "250px", height: "160px" };
-    const events = this.state.eventsArray;
+    const events = this.state.eventsArray.reverse();
     console.log("event in render", events);
     const listOfEvents = events.map((evenement, i) => {
       return (
