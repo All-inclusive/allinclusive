@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
 import axios from "axios";
 import SignIn from "./SignIn.jsx";
+import Client from "./Client.jsx";
 
 class SignUpMyAccount extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class SignUpMyAccount extends React.Component {
     this.addClient = this.addClient.bind(this);
     this.handleChangeSignIn = this.handleChangeSignIn.bind(this);
     this.addCompany = this.addCompany.bind(this);
+    this.submitClicked=this.submitClicked.bind(this)
   }
 
   handleChangeSignIn(e) {
@@ -87,8 +89,18 @@ class SignUpMyAccount extends React.Component {
       showLogin: false,
     });
   }
+  // the button submit for sign up section 
+  submitClicked(){
+    this.setState({
+      showLogIn : true,
+      showClientSignUp : false
+    })
+  }
+
   RegisterClick() {
     this.setState({
+      showLogIn : false,
+      
       client: true,
       company: true,
       showClientSignUp: false,
@@ -104,7 +116,7 @@ class SignUpMyAccount extends React.Component {
       height: "900px",
       backgroundImage:
         "url(" +
-        "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
+        "https://img.over-blog-kiwi.com/1/48/86/09/20191101/ob_8e56a6_ob-46b210-ob-36939e-vj56emye0nx7rs-u-k.gif" +
         ")",
     };
 
@@ -116,6 +128,7 @@ class SignUpMyAccount extends React.Component {
           <div>
             <Row>
               {this.state.showClientSignUp && (
+
                 <Container id="clientSignUp" style={sectionStyle}>
                   <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
                     <svg
@@ -213,7 +226,7 @@ class SignUpMyAccount extends React.Component {
                   />
                   <center>
                   <button button type="button" class="btn btn-primary btn-lg btn-block"
-                    onClick={(e) => this.addClient(e)}
+                    onClick={(e) => this.addClient(e),this.submitClicked}
                   >
                     Submit
                   </button>
@@ -222,6 +235,11 @@ class SignUpMyAccount extends React.Component {
               
                 </Container>
               )}
+              
+              {this.state.showLogIn && (
+                    <Client/>
+                  ) }
+                  
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
                   
