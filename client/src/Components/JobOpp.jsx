@@ -61,6 +61,10 @@ class JobOpp extends Component {
                 <Form.Control name="firstName" placeholder="Enter your first name" />
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control name="lastName" placeholder="Enter your last name" />
+                <Form.Label>Age</Form.Label>
+                <Form.Control name="age" />
+                <Form.Label>Gender</Form.Label>
+                <Form.Control name="gender" />
                 <Form.Label>Email</Form.Label>
                 <Form.Control name="email" placeholder="Enter email" />
                 <Form.Label>Password</Form.Label>
@@ -73,31 +77,13 @@ class JobOpp extends Component {
                 
                 <Form.Label>Image URL</Form.Label>
                 <Form.Control name="url" placeholder="Enter your image URL" />
+                <button type="button" class="btn btn-dark" onClick = {this.submitClicked} >
+                    Submit
+                </button>
                 </Col>
                 <Col style={{fontSize:'20px'}}>
-                <br></br>
-                <br></br>
-                <br></br>
-                <Form.Label>Weight</Form.Label>
-                <Form.Control name="weight"  />
-                <Form.Label>Height</Form.Label>
-                <Form.Control name="height" />
-                <Form.Label>Age</Form.Label>
-                <Form.Control name="age" />
-                <Form.Label>Gendre</Form.Label>
-                <br></br>
-                
-                  <button type="button" class="btn btn-dark" onClick = {this.submitClicked} >
-                    Submit
-                  </button>
                 </Col>
-                
                 </Row>
-                
-                
-                <br></br>
-                <br></br>
-                <br></br>
                 </Container>
                 )}
                  {this.state.showLogIn && (
@@ -105,7 +91,6 @@ class JobOpp extends Component {
                   ) }
               </center>
               </div>
-        
         );
     }
 }
