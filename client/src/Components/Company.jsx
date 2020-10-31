@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Col, Container, Row,Card,ListGroup,ListGroupItem, Table, Button, } from "react-bootstrap";
-import ChatBox from './ChatBox.jsx'
+
 
 
 class Company extends Component  {
@@ -24,7 +24,7 @@ class Company extends Component  {
             
               <Col>
               <Card style={{ width: '18rem' }}>
-  <Card.Img  variant="top" src="https://files.slack.com/files-pri/T0178VC0Y48-F01DEPKEKM1/ed79ddcc-fcab-44a3-b050-d54cdffa159c_200x200.png" />
+  <Card.Img  variant="top" src="https://media.istockphoto.com/vectors/all-inclusive-sign-vector-id1153268310"/>
   <Card.Body>
     <Card.Title>Welcome ! </Card.Title>
     <Card.Text>
