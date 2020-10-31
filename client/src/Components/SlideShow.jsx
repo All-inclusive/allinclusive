@@ -1,17 +1,25 @@
-import React from 'react';
-import render from 'react-dom';
+
+import React, { Component } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 
-class Slide extends React.Component {
+
+
+class Slide extends Component {
+
+    
+    
     
      render(){
+
+        
          
          return(
             <Carousel >
+                
                 <Carousel.Item>
                     <img
                     className="d-block"
-                    src="https://lh3.googleusercontent.com/proxy/izKVS_E_b7iTg7OMAMq2irJTZYjxPIA3DwlSuJmLXOC-18o8fm6zJAkyYjtdRmWrBm2HVSAjMGdUB0M6KyTEsy_AE6W8SQRv35x8D_UhAXqPtjPgQm3rhnM9qTfNQwqOQhU"
+                    src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/123136888_10158906221036031_2675017835064326862_o.jpg?_nc_cat=108&ccb=2&_nc_sid=730e14&_nc_ohc=sueWpE_Q4I0AX-uVK9D&_nc_ht=scontent.ftun2-1.fna&oh=dec144e54e55e613e4e8b49c08ae9a0d&oe=5FC0F262"
                     alt="First slide"
                     />
                    
