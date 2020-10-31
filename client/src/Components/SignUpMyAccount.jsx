@@ -161,13 +161,12 @@ class SignUpMyAccount extends React.Component {
                   </h1>
 
                   <Form>
-                    <Form.Row>
                       <Form.Label style={{ fontSize: "30px" }}>
                         Client type
                       </Form.Label>
                       <Form.Control
                         name="type"
-                        placeholder="company"
+                        placeholder="Client/Company"
                         onChange={this.handleChangeSignIn}
                       />
                       <Form.Label style={{ fontSize: "30px" }}>
@@ -187,7 +186,6 @@ class SignUpMyAccount extends React.Component {
                         placeholder="Last name"
                         onChange={this.handleChangeSignIn}
                       />
-                    </Form.Row>
                   </Form>
 
                   <Form.Label style={{ fontSize: "30px" }}>Email</Form.Label>
