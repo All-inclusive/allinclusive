@@ -25,9 +25,9 @@ class Client extends Component {
             <Col xs={6}>
               <EventList />;
             </Col>
-            {/* <Col>
+            <Col>
               <ChatBox />
-            </Col> */}
+            </Col>
           </Row>
         </Container>
       </div>
