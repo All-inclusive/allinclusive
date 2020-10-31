@@ -34,7 +34,7 @@ class SignUpMyAccount extends React.Component {
     this.addClient = this.addClient.bind(this);
     this.handleChangeSignIn = this.handleChangeSignIn.bind(this);
     this.addCompany = this.addCompany.bind(this);
-    this.submitClicked=this.submitClicked.bind(this)
+    this.submitClicked = this.submitClicked.bind(this);
   }
 
   handleChangeSignIn(e) {
@@ -69,9 +69,15 @@ class SignUpMyAccount extends React.Component {
       imgUrlCompany: this.state.imgUrlCompany,
     };
     console.log(newCompany);
-    axios.post("/api/company/add", newCompany).then((result) => {
-      console.log(result);
-    });
+    axios
+      .post("/api/company/add", newCompany)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err);
+      });
   }
 
   clicked() {
@@ -92,18 +98,18 @@ class SignUpMyAccount extends React.Component {
       showLogin: false,
     });
   }
-  // the button submit for sign up section 
-  submitClicked(){
+  // the button submit for sign up section
+  submitClicked() {
     this.setState({
-      showLogIn : true,
-      showClientSignUp : false
-    })
+      showLogIn: true,
+      showClientSignUp: false,
+    });
   }
 
   RegisterClick() {
     this.setState({
-      showLogIn : false,
-      
+      showLogIn: false,
+
       client: true,
       company: true,
       showClientSignUp: false,
@@ -131,7 +137,6 @@ class SignUpMyAccount extends React.Component {
           <div>
             <Row>
               {this.state.showClientSignUp && (
-
                 <Container id="clientSignUp" style={sectionStyle}>
                   <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
                     <svg
@@ -156,13 +161,12 @@ class SignUpMyAccount extends React.Component {
                   </h1>
 
                   <Form>
-                    <Form.Row>
                       <Form.Label style={{ fontSize: "30px" }}>
                         Client type
                       </Form.Label>
                       <Form.Control
                         name="type"
-                        placeholder="company"
+                        placeholder="Client/Company"
                         onChange={this.handleChangeSignIn}
                       />
                       <Form.Label style={{ fontSize: "30px" }}>
@@ -182,7 +186,6 @@ class SignUpMyAccount extends React.Component {
                         placeholder="Last name"
                         onChange={this.handleChangeSignIn}
                       />
-                    </Form.Row>
                   </Form>
 
                   <Form.Label style={{ fontSize: "30px" }}>Email</Form.Label>
@@ -228,7 +231,6 @@ class SignUpMyAccount extends React.Component {
                     // onSelect for getting the value
                   />
                   <center>
-
                     <button
                       button
                       type="button"
@@ -237,15 +239,12 @@ class SignUpMyAccount extends React.Component {
                     >
                       Submit
                     </button>
-
                   </center>
                 </Container>
               )}
-              
-              {this.state.showLogIn && (
-                    <Client/>
-                  ) }
-                  
+
+              {this.state.showLogIn && <Client />}
+
               {this.state.showCompanySignUp && (
                 <Container id="companySignUp" style={sectionStyle}>
                   <h1 style={{ marginBottom: "50px", marginTop: "50px" }}>
