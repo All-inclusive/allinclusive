@@ -67,7 +67,7 @@ router.post("/login", async (req, res, next) => {
 
     //create and assign a token
     const token = jwt.sign({ _id: user._id }, config.get("jwt").secret);
-    res.header("auth-token", token).json(token);
+    res.header("auth-token", token).json(user);
   } catch (error) {
     if (error.isJoi === true) res.status(400).send(error.details[0].message);
     next(error);
