@@ -24,6 +24,7 @@ render(){
                     <NavDropdown title="Extra" id="collasible-nav-dropdown">
                         <NavDropdown.Item  onClick={(e)=>this.props.changeView('Job opportunities')}>Job opportunities</NavDropdown.Item>
                         <NavDropdown.Item onClick={(e)=>this.props.changeView('Become a Seller')}>Become a Seller</NavDropdown.Item>
+                        <NavDropdown.Item onClick={(e)=>this.props.changeView('Company')}>Company</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item >About Us</NavDropdown.Item>
                     </NavDropdown>

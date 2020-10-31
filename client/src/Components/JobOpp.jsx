@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import { Col, Container, Form, Image, Row } from "react-bootstrap";
+import SignIn from "./SignIn.jsx";
 
 
 class JobOpp extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      showLogIn : false,
+      showSignUp : true
+    }
+    this.submitClicked=this.submitClicked.bind(this)
+  }
+  submitClicked(){
+    this.setState({
+      showLogIn : true,
+      showSignUp : false
+    })
+  }
 
     render(){
 
@@ -10,10 +25,7 @@ class JobOpp extends Component {
         fontSize: "30px",
         width: "100%",
         height: "600px",
-        backgroundImage:
-          "url(" +
-          "https://www.ohspa.ca/wp-content/uploads/2015/07/signup-background.jpg" +
-          ")",
+       
       };
         return (
         
@@ -21,6 +33,7 @@ class JobOpp extends Component {
                 <br></br>
                 <br></br>
                 <center>
+                {this.state.showSignUp && (
                   <Container style={sectionStyle}>
                     <Row>
                 <Col style={{fontSize:'20px'}}>
@@ -74,7 +87,7 @@ class JobOpp extends Component {
                 <Form.Label>Gendre</Form.Label>
                 <br></br>
                 
-                  <button type="button" class="btn btn-dark">
+                  <button type="button" class="btn btn-dark" onClick = {this.submitClicked} >
                     Submit
                   </button>
                 </Col>
@@ -86,6 +99,10 @@ class JobOpp extends Component {
                 <br></br>
                 <br></br>
                 </Container>
+                )}
+                 {this.state.showLogIn && (
+                    <SignIn/>
+                  ) }
               </center>
               </div>
         

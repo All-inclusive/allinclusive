@@ -110,6 +110,7 @@ class SignIn extends React.Component {
                   Register
                 </label>
                 <input
+
                   type="radio"
                   name="active-log-panel"
                   id="log-login-show"
