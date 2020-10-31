@@ -22,6 +22,11 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.mp3$/,
+        include: SRC_DIR,
+        loader: 'file-loader'
+      }
     ],
   },
 };

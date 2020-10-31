@@ -6,6 +6,7 @@ import EventsList from "./EventsList.jsx";
 
 
 
+
 class Company extends Component  {
     render(){
       console.log("events in render", this.state.eventsArray);
